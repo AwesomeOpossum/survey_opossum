@@ -27,4 +27,4 @@ The author can send out a link, and anyone with the link can fill out the survey
 
 
 ## ERD
-A link to our ERD can be found (here)[https://www.lucidchart.com/invitations/accept/92992156-1bd1-436c-9582-0cc0a862dd5d]
+A link to our ERD can be found [here](https://www.lucidchart.com/invitations/accept/92992156-1bd1-436c-9582-0cc0a862dd5d)
