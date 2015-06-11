@@ -16,6 +16,27 @@ The author can send out a link, and anyone with the link can fill out the survey
 * Authors can view all of the answers for any survey they have created.
   * In this view, answers are grouped by question.
 
+####Creating Surveys
+* Surveys must have:
+  * Title (required)
+  * Description (optional)
+  * A set of questions
+* Every question has:
+  * Question text (required)
+  * Question description (optional)
+* There are three types of questions that should be supported:
+  * Yes/no
+  * Short answer
+  * Long answer
+* Questions can be reordered
+* Publishing a survey works as follows:
+  * By default, surveys are not published.  The author must choose to publish a survey.
+  * The survey must have at least one question before it can be published.
+  * When published, the author is immediately presented a link that they can send to people to take the survey.
+
+  
+
+
 ###Taking a Survey
 * If a taker has a link to a survey:
   * The taker can follow the link directly to the survey.
