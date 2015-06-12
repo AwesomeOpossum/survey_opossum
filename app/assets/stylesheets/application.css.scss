@@ -26,17 +26,16 @@
 	top: 0;	
 	left: 0;
 	position: fixed;
-	background-color:  ;
 	color: #ffffff;
 	width: 100%;text-align: center;
 	z-index: 1000;
 	height: 7em;
 		box-shadow: 0em .25em 1em #888888;	
 	
-	background: -webkit-linear-gradient(left, #202040 , blue);  For Safari 5.1 to 6.0 
-  background: -o-linear-gradient(right,#202040 , blue);  For Opera 11.1 to 12.0 
+	background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/ 
+  background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,#202040 , blue);  Standard syntax */
+  background: linear-gradient(to right,#202040 , blue);  /*Standard syntax */
 	
 
 	
@@ -74,16 +73,36 @@ button{
 	background-color:#1d3654;
 }
 
-.dynamically-add-button{
-	background-color:orange;
+.add-button{
+	background-color:orange;	
+}
+
+
+button:focus{
+	outline:none;
 	
+}
+
+.submit-button:active{
+	background-color:#c1094c;
+	
+}
+
+
+.new-account-button:active{
+	background-color:blue;
+}
+
+.add-button:active{
+	background:#ff7400;
 }
 
 
 .login,
 .create-survey,
 .take-survey,
-.survey-results{
+.survey-results,
+.user-home-page{
 	background-color:#e9eef1;	
 	margin-top: 3em;	
 	padding: 1.5em;	
