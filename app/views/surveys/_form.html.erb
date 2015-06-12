@@ -12,22 +12,63 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title, 'Tell us the name of your survey:', class:'text' %><br>
+    <%= f.text_field :title, placeholder: 'Survey Title', class:'text' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :description, 'Describe your survey:', class:'text' %><br>
+    <%= f.text_area :description, class:'text' %>
   </div>
   <div class="field">
     <%= f.label :author_id %><br>
     <%= f.number_field :author_id %>
   </div>
-  <div class="field">
-    <%= f.label :publish %><br>
+
+
+  <footer class="actions">
+
+    <span>
+    <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
+    </span>
+
+    <span>
+    <%= f.label :publish, class:'text' %>
     <%= f.check_box :publish %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    </span>
+
+    <span>
+    <%= f.button "Save", class:'submit-button' %>
+    </span>
+
+  </footer>
+
 <% end %>
+
+
+
+<form class="create-survey">
+  <!--<div class="survey-header"-->
+    <label class="text">Tell us the name of your survey:</label><br>
+    <input type="text" class="input-data" placeholder="Survey Title"><br>
+
+    <label class="text">Please provide a brief description of your survey:</label><br>
+    <input type="text" class="input-data" placeholder="Survey Description"><br>
+
+
+  <div>
+
+   <label>Yes or No
+     <input type="radio" name="question">
+   </label>
+   <label>Short Answer
+     <input type="radio" name="question">
+   </label>
+   <label>Long Answer
+     <input type="radio" name="question">
+   </label>
+     <input type="text">
+
+  </div>
+
+
+</form>
