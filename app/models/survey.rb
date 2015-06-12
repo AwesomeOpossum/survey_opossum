@@ -3,7 +3,6 @@ class Survey < ActiveRecord::Base
 
   has_many :questions
   accepts_nested_attributes_for :questions,
-      reject_if: :all_blank,
+      reject_if: proc { |attributes| attributes['question_text'].blank? }, 
       allow_destroy: true
-
 end

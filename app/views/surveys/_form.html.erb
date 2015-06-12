@@ -28,7 +28,7 @@
     <div class="question-box">
       <div class="field">
         <%= ff.label :question_type, 'Select Question Type' %><br>
-        <%= ff.select :question_type, options_for_select(["Yes/No", "Short Answer", "Long Answer"]) %>
+        <%= ff.select :question_type, options_for_select(["Yes/No", "Short Answer", "Long Answer"]), include_blank: 'Please Select' %>
       </div>
       <div class="field">
         <%= ff.label :question_text, 'Enter Question:' %><br>
