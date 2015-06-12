@@ -4,6 +4,7 @@ class SurveysController < ApplicationController
   # GET /surveys
   # GET /surveys.json
   def index
+
     @surveys = Survey.all
   end
 
