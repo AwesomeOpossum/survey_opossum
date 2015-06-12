@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 .background{
 	margin-left:auto;
 	margin-right:auto;
@@ -180,3 +181,9 @@ input:focus{
 	margin: 0 auto;
 	text-align: center;
 }
+=======
+
+.question-box {
+  border: 1px solid gray;
+}
+>>>>>>> 7d4da3ddc6aef781787a1f09e2c2593b87dd6e0e
