@@ -20,9 +20,35 @@
     <%= f.text_area :description, class:'text' %>
   </div>
   <div class="field">
-    <%= f.label :author_id %><br>
-    <%= f.number_field :author_id %>
+    <%= f.hidden_field :author_id %>
   </div>
+
+
+  <h3> Questions: </h3>
+  <%= f.fields_for(:questions) do |ff| %>
+    <div class="question-box">
+      <div class="field">
+        <%= ff.label :question_type, 'Select Question Type' %><br>
+        <%= ff.select :question_type, options_for_select(["Yes/No", "Short Answer", "Long Answer"]), include_blank: 'Please Select' %>
+      </div>
+      <div class="field">
+        <%= ff.label :question_text, 'Enter Question:' %><br>
+        <%= ff.text_area :question_text%>
+      </div>
+      <div class="field">
+        <%= ff.label :required %><br>
+        <%= ff.check_box :required %>
+      </div>
+      <div class="field">
+        <%= ff.label :order_number %><br>
+        <%= ff.number_field :order_number %>
+      </div>
+      <div class="field">
+        <%= ff.label :_destroy %><br>
+        <%= ff.check_box :_destroy %>
+      </div>
+    </div>
+  <% end %>
 
 
   <footer class="actions">

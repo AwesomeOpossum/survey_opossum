@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
 .background{
 	margin-left:auto;
 	margin-right:auto;
 	background-color:#ffffff;
 
 }
-
 
 
 .header{
@@ -30,18 +30,13 @@
 	width: 100%;text-align: center;
 	z-index: 1000;
 	height: 7em;
-		box-shadow: 0em .25em 1em #888888;
-
+	box-shadow: 0em .25em 1em #888888;
 	background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/
   background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0*/
   background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#202040 , blue); /* Standard syntax */
-
-
-
-
-
 }
+
 
 .text{
 	color: blue;
@@ -53,6 +48,7 @@ h1{
 
 }
 
+
 h4{
 
 }
@@ -62,16 +58,17 @@ button{
 	color: #ffffff;
 	font-size: 1em;
 	padding: .5em;
-
 	border-style: none;
 	margin: 1em;
 
 }
 
+
 .submit-button{
 	background-color:#f20c60;
 
 }
+
 
 .new-account-button{
 	background-color:#1d3654;
@@ -79,7 +76,6 @@ button{
 
 .add-button{
 	background-color:orange;
-
 }
 
 
@@ -94,17 +90,13 @@ button{
 	max-width: 850px;
 	margin-left: auto;
 	margin-right:auto;
-
-
 	box-shadow: 0em .25em 1em #888888;
-
 }
 
 .login{
 	margin-top:10em;
 	/*display: inline-block;*/
 	max-width: 350px;
-
 }
 
 
@@ -119,9 +111,7 @@ button{
 }
 
 .button-box{
-
 	text-align: center;
-
 }
 
 
@@ -148,10 +138,6 @@ button{
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom:1.5em;
-
-
-
-
 }
 
 
