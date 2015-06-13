@@ -1,20 +1,7 @@
 // FORMS
 
 
-.login,
-.create-survey,
-.survey-results,
-.user-home-page{
-  position: relative;
-	background-color:#e9eef1;
-	margin-top: 10em;
-	padding: 1.5em;
-	min-width: 320px;
-	max-width: 850px;
-	margin-left: auto;
-	margin-right:auto;
-	box-shadow: 0em .25em 1em #888888;
-}
+
 
 form h2{
 	text-align: center;
@@ -36,6 +23,14 @@ form h3{
 	font-size: 1em;
 	margin-top: .5em;
 	margin-bottom:1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#e9eef1;
+}
+
+.question-box{
+	background-color: #D55C3D;
+	padding: 1em;
 }
 
 .question-details-container{

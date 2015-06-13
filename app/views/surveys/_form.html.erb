@@ -36,35 +36,42 @@
   <!--Individual Question-->
 
   <%= f.fields_for(:questions) do |ff| %>
-    <div class="question-box">
+  <div class="field">
+    <%= ff.label :order_number %><br>
+    <%= ff.number_field :order_number %>
+  </div>
 
-      <div class="question-details-container">
-        <div class="question-details">
-          <h3>#</h3>
-          <%= ff.number_field :order_number %>
-        </div>
-        <div class="question-details">
-          <h3>Question Type</h3><br>
-          <label class="text">Yes/No</label>
-          <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
-          <label class="text">Short Answer</label>
-          <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
-          <label class="text">Long Answer</label>
-          <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
-        </div>
-        <div class="question-details">
-          <h3>Required?</h3><br>
-          <%= ff.check_box :required, class:'input-data' %>
-        </div>
-        <div class="field">
-          <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
-        </div>
+  <div class="question-box">
+
+    <div class="question-details-container">
+      <div class="question-details">
+        <h3>#</h3>
+        <%= ff.number_field :order_number %>
       </div>
-
-      <div class="question">
-        <%= ff.text_field :question_text, class:'question-input input-data', placeholder:'Type your question here' %>
+      <div class="question-details">
+        <h3>Question Type</h3><br>
+        <label class="text">Yes/No</label>
+        <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
+        <label class="text">Short Answer</label>
+        <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
+        <label class="text">Long Answer</label>
+        <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
+      </div>
+      <div class="question-details">
+        <h3>Required?</h3><br>
+        <%= ff.check_box :required, class:'input-data' %>
+      </div>
+      <div class="field">
+        <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
       </div>
     </div>
+
+    <div class="question">
+      <%= ff.text_field :question_text, class:'question-input input-data', placeholder:'Type your question here' %>
+    </div>
+
+  </div>
+  
   <% end %>
 
 <!--Footer with New Question, Publish Checkbox and Save Button-->
