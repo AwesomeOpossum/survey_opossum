@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'surveys#index'
+  root 'surveys#author_profile'
 
   get 'sessions/login'
   post 'sessions/login'

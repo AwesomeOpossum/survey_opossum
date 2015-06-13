@@ -1,9 +1,13 @@
 class SurveysController < ApplicationController
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in?
 
   def index
-
     @surveys = Survey.all
+  end
+
+  def author_profile
+    @surveys = Survey.where(author_id: session[:user_id])
   end
 
   def show
@@ -39,6 +43,12 @@ class SurveysController < ApplicationController
     @survey.destroy
     redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
   end
+
+  private def logged_in?
+   unless Author.find_by_id(session[:user_id])
+     redirect_to sessions_login_path, notice: 'Invalid username and passoword.'
+   end
+ end
 
   private
     # Use callbacks to share common setup or constraints between actions.
