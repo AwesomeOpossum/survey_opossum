@@ -1,0 +1,43 @@
+// BUTTONS
+
+.button-box{
+	text-align: center;
+}
+
+button{
+	color: #ffffff;
+	font-size: 1em;
+	padding: .5em;
+	border-style: none;
+	margin: 1em;
+}
+
+button:focus{
+	outline:none;
+}
+
+.submit-button{
+    background-color:#f20c60 ;
+}
+
+
+.new-account-button{
+    background-color:#1d3654 ;
+}
+
+
+.add-button{
+    background-color:orange;
+}
+
+.submit-button:active{
+	background-color:#c1094c;
+}
+
+.new-account-button:active{
+	background-color:blue;
+}
+
+.add-button:active{
+	background:#ff7400;
+}

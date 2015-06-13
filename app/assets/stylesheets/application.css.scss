@@ -14,159 +14,56 @@
  *= require_self
  */
 
-.background{
-	margin-left:auto;
-	margin-right:auto;
-	background-color:#ffffff;
 
+
+
+
+//
+
+body{
+	font-family: "Arial Black", Gadget, sans-serif;
 }
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
+
+
+// HEADER
+
+
 .header{
 	top: 0;
 	left: 0;
+	right: 0;
 	position: fixed;
 	color: #ffffff;
-	width: 100%;text-align: center;
-	z-index: 1000;
-	height: 7em;
-<<<<<<< HEAD
+	box-sizing: border-box;
 	box-shadow: 0em .25em 1em #888888;
+	z-index: 1;
+
 	background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/
   background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0*/
   background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right,#202040 , blue); /* Standard syntax */
 }
 
-
-.text{
-	color: blue;
-=======
-		box-shadow: 0em .25em 1em #888888;
-
-	background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/
-  background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,#202040 , blue);  /*Standard syntax */
+		.header h1{
+			text-align: center;
+		}
 
 
 
 
 
->>>>>>> master
-}
-
-
-h1{
-
-
-}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-h4{
-
-}
-
-
-button{
-	color: #ffffff;
-	font-size: 1em;
-	padding: .5em;
-<<<<<<< HEAD
-=======
-
->>>>>>> master
-	border-style: none;
-	margin: 1em;
-
-}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-.submit-button{
-	background-color:#f20c60;
-
-}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> master
-.new-account-button{
-	background-color:#1d3654;
-}
-
-.add-button{
-	background-color:orange;
-}
-
-
-<<<<<<< HEAD
-.login,
-.new_survey,
-.take-survey,
-.survey-results{
-=======
-button:focus{
-	outline:none;
-
-}
-
-.submit-button:active{
-	background-color:#c1094c;
-
-}
-
-
-.new-account-button:active{
-	background-color:blue;
-}
-
-.add-button:active{
-	background:#ff7400;
-}
-
-
-.login,
-.create-survey,
-.take-survey,
-.survey-results,
-.user-home-page{
->>>>>>> master
-	background-color:#e9eef1;
-	margin-top: 3em;
-	padding: 1.5em;
-	min-width: 320px;
-	max-width: 850px;
-	margin-left: auto;
-	margin-right:auto;
-<<<<<<< HEAD
-	box-shadow: 0em .25em 1em #888888;
-=======
-
-
-	box-shadow: 0em .25em 1em #888888;
-
->>>>>>> master
+.question-box{
+	background-color: #D55C3D;
+	padding: 1em;
 }
 
 .login{
 	margin-top:10em;
 	/*display: inline-block;*/
 	max-width: 350px;
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 }
 
 
@@ -180,15 +77,6 @@ button:focus{
 	margin-right: auto;
 }
 
-.button-box{
-<<<<<<< HEAD
-	text-align: center;
-=======
-
-	text-align: center;
-
->>>>>>> master
-}
 
 
 /*
@@ -199,48 +87,11 @@ button:focus{
 .survey-results{
 	width: 80%;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 */
 
 
 
-
-.input-data{
-	border: none;
-	width: 40em;
-	padding: .25em;
-	font-size: 1em;
-	margin-top: .5em;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom:1.5em;
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> master
-}
-
-
-
-input:focus{
-	outline: none;
-}
-
 .survey-results{
 	margin: 0 auto;
 	text-align: center;
-<<<<<<< HEAD
-=======
-}
-
-
-.question-box {
-  border: 1px solid gray;
->>>>>>> master
 }
