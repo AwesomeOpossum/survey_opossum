@@ -1,32 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 
-  <h1>Your Surveys</h1>
+  <h2>Your Surveys</h2>
   <form class="user-home-page">
         <div class="button-box">
-           <%= link_to 'New Survey', new_survey_path %>
-           <%= button_tag 'Log Out' %>
-        </div>
-   <table>
+           <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
+           <%= button_tag 'Log Out', :class=> 'submit-button' %>
+   <table rules="none" class="table">
       <thead>
-        <tr>
-          <th>Published</th>
-          <th>Survey Title</th>
-          <th>Description</th>
+        <tr >
+          <th class="table-header">Published</th>
+          <th class="table-header">Survey Title</th>
+          <!-- <th class="table-header">Description</th> -->
+          <th class="table-header url">Link to Survey</th>
+          <th class="table-header"></th>
+          <th class="table-header"></th>
+          <th class="table-header"></th>
           <th colspan="3"></th>
-          <th>json.url Link to Survey </th>
+
         </tr>
     </thead>
       <tbody>
           <% @surveys.each do |survey| %>
             <tr>
+              <td><%= survey.publish %></td>
               <td><%= survey.title %></td>
+              <!-- <td><%= survey.description %></td> -->
               <td><%= survey.description %></td>
               <td><%= link_to 'Show', survey %></td>
               <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
               <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
-
          <% end %>
     </tbody>
     </table>
