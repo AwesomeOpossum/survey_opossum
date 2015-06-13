@@ -1,0 +1,55 @@
+// FORMS
+
+
+
+
+form h2{
+	text-align: center;
+}
+
+form h3{
+  text-align: center;
+}
+
+
+
+
+// INPUTS
+
+
+.input-data{
+	border: none;
+	padding: .25em;
+	font-size: 1em;
+	margin-top: .5em;
+	margin-bottom:1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#e9eef1;
+}
+
+.question-box{
+	background-color: #D55C3D;
+	padding: 1em;
+}
+
+.question-details-container{
+}
+
+.question-details .input-data{
+  display: inline;
+}
+
+input:focus{
+	outline: none;
+}
+
+.destroy-checkbox{
+  display: none;
+}
+
+.question-input{
+  padding: .5em;
+  text-align: center;
+  width: 90%;
+}

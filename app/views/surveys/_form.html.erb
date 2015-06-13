@@ -1,4 +1,6 @@
-<%= form_for(@survey) do |f| %>
+<!--New/Edit Survey Form-->
+
+<%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
   <% if @survey.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
@@ -11,50 +13,86 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title%><br>
-    <%= f.text_field :title %>
+<!--Survey Details-->
+
+  <div class="survey-details">
+    <div class="field">
+      <h2>Title</h2><br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <h2>Description</h2><br>
+      <%= f.text_area :description, class:'text' %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :author_id %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :author_id %>
-  </div>
-  <div class="field">
-    <%= f.label :publish %><br>
-    <%= f.check_box :publish %>
-  </div>
-  <h3> Questions: </h3>
+
+<!--Questions-->
+
+  <h2> Questions: </h2>
+
+  <!--Individual Question-->
+
   <%= f.fields_for(:questions) do |ff| %>
   <div class="field">
     <%= ff.label :order_number %><br>
     <%= ff.number_field :order_number %>
   </div>
-    <div class="question-box">
-      <div class="field">
-        <%= ff.label :question_type, 'Select Question Type' %><br>
-        <%= ff.select :question_type, options_for_select(["Yes/No", "Short Answer", "Long Answer"]), include_blank: 'Please Select' %>
-      </div>
-      <div class="field">
-        <%= ff.label :required %><br>
-        <%= ff.check_box :required %>
-      </div>
-      <div class="field">
-        <%= ff.label :question_text, 'Enter Question:' %><br>
-        <%= ff.text_area :question_text%>
-      </div>
 
+  <div class="question-box">
 
+    <div class="question-details-container">
+      <div class="question-details">
+        <h3>#</h3>
+        <%= ff.number_field :order_number %>
+      </div>
+      <div class="question-details">
+        <h3>Question Type</h3><br>
+        <label class="text">Yes/No</label>
+        <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
+        <label class="text">Short Answer</label>
+        <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
+        <label class="text">Long Answer</label>
+        <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
+      </div>
+      <div class="question-details">
+        <h3>Required?</h3><br>
+        <%= ff.check_box :required, class:'input-data' %>
+      </div>
       <div class="field">
-        <%= ff.label :_destroy %><br>
-        <%= ff.check_box :_destroy %>
+        <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
       </div>
     </div>
+
+    <div class="question">
+      <%= ff.text_field :question_text, class:'question-input input-data', placeholder:'Type your question here' %>
+    </div>
+
+  </div>
+  
   <% end %>
 
-  <div class="actions">
-    <%= f.button "Save"%>
-  </div>
+<!--Footer with New Question, Publish Checkbox and Save Button-->
+
+  <footer class="actions">
+
+    <div class="action-options">
+      <span>
+      <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
+      </span>
+
+      <span>
+      <%= f.label :publish, class:'text' %>
+      <%= f.check_box :publish %>
+      </span>
+
+      <span>
+      <%= f.button "Save", class:'submit-button' %>
+      </span>
+    </div>
+
+  </footer>
+
 <% end %>
