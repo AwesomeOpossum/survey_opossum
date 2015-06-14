@@ -20,6 +20,7 @@ class SurveysController < ApplicationController
 
   def create
     @survey = Survey.new(survey_params)
+    @survey.author_id = session[:user_id]
     if @survey.save
       redirect_to edit_survey_path(@survey), notice: 'Survey was successfully created.'
     else
@@ -39,17 +40,6 @@ class SurveysController < ApplicationController
     @survey.destroy
     redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
   end
-
-
-  def logged_in?
-  if session[:user_type] == "parent" || session[:user_type] == "student"
-    redirect_to login_path, notice: "You can't view that page"
-  else
-    true
-  end
-end
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
