@@ -1,4 +1,6 @@
 <!--New/Edit Survey Form-->
+<body>
+
 
 <%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
   <% if @survey.errors.any? %>
@@ -15,84 +17,87 @@
 
 <!--Survey Details-->
 
-  <div class="survey-details">
-    <div class="field">
-      <h2>Title</h2><br>
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <h2>Description</h2><br>
-      <%= f.text_area :description, class:'text' %>
-    </div>
+
+
+<!-- <input type="text" class="input-data", placeholder="Survey Description"><br> -->
+
+
+  <label class="text">Tell us the name of your survey:</label><br>
+
+    <%= f.text_field :title, class: "input-data", :placeholder => "Survey Title"%><br>
+
+  <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
+
+    <%= f.text_area :description, class:'input-data', :placeholder => "Survey Description" %>
+
+
+
     <div class="field">
       <%= f.hidden_field :author_id %>
     </div>
-  </div>
 
-<!--Questions-->
+  <div>
 
-  <h2> Questions: </h2>
+    <h3 class="questions">Add your questions here</h3>
 
-  <!--Individual Question-->
+    <%= f.fields_for(:questions) do |ff| %>
 
-  <%= f.fields_for(:questions) do |ff| %>
-  <div class="field">
-    <%= ff.label :order_number %><br>
-    <%= ff.number_field :order_number %>
-  </div>
 
-  <div class="question-box">
+      <%= ff.number_field :order_number, class: "sort-order"%>
+      <%= ff.label :order_number, class: "text" %>Question Number<br>
 
-    <div class="question-details-container">
-      <div class="question-details">
-        <h3>#</h3>
-        <%= ff.number_field :order_number %>
+
+      <div class="input data">What type of question would you like to ask?</br>
+
+          <label>
+
+            Yes or No
+              <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
+          </label>
+
+          <label>
+
+            Short Answer
+              <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
+
+          </label>
+          <label>Long Answer
+              <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
+          </label><br>
+
+          Required answer
+            <%= ff.check_box :required, class:'input-data' %>
+
+
+          <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
+
+
       </div>
-      <div class="question-details">
-        <h3>Question Type</h3><br>
-        <label class="text">Yes/No</label>
-        <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
-        <label class="text">Short Answer</label>
-        <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
-        <label class="text">Long Answer</label>
-        <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
-      </div>
-      <div class="question-details">
-        <h3>Required?</h3><br>
-        <%= ff.check_box :required, class:'input-data' %>
-      </div>
-      <div class="field">
-        <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
-      </div>
-    </div>
 
-    <div class="question">
-      <%= ff.text_field :question_text, class:'question-input input-data', placeholder:'Type your question here' %>
-    </div>
+      <input type="text" class="input-data" placeholder="Your Answer Here"><br>
 
-  </div>
-  
   <% end %>
 
-<!--Footer with New Question, Publish Checkbox and Save Button-->
 
-  <footer class="actions">
+      <footer class="actions">
 
-    <div class="action-options">
-      <span>
-      <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
-      </span>
+        <div class="action-options">
+          <span>
+          <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
+          </span>
 
-      <span>
-      <%= f.label :publish, class:'text' %>
-      <%= f.check_box :publish %>
-      </span>
+          <span>
+          <label class="text add-button">Publish
+          <%= f.check_box :publish %>
+          </label>
+          </span>
 
-      <span>
-      <%= f.button "Save", class:'submit-button' %>
-      </span>
-    </div>
+          <span>
+          <%= f.button "Save", class:'submit-button' %>
+          </span>
+        </div>
 
-  </footer>
+      </footer>
 
-<% end %>
+    <% end %>
+</body>
