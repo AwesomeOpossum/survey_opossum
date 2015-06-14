@@ -14,30 +14,38 @@
  *= require_self
  */
 
-
-.background{
+body{
+	font: normal normal normal 11px/normal '.HelveticaNeueDeskInterface-Regular';
+	font-family: '.HelveticaNeueDeskInterface-Regular';
+	// background-color: #e9eef1;
 	margin-left:auto;
 	margin-right:auto;
-	background-color:#ffffff;
+
+	background-color:#bdcbbd;
 }
 
 
 
-.header{
-	top: 0;
-	left: 0;
-	position: fixed;
-	color: #ffffff;
-	width: 100%;
-	text-align: center;
-	z-index: 1;
-	height: 5em;
-	box-shadow: 0em .25em 1em #888888;
-	background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/
-  background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right,#202040 , blue);  /*Standard syntax */
-}
+// .header{
+// 	top: 0;
+// 	left: 0;
+// 	position: fixed;
+// 	color: #ffffff;
+// 	width: 100%;
+// 	text-align: center;
+// 	z-index: 1;
+// 	height: 5em;
+// 	box-shadow: 0em .25em 2em #888888;
+// 	background-color:#839883;
+//
+
+
+
+	// background: -webkit-linear-gradient(left, #202040 , blue); /* For Safari 5.1 to 6.0*/
+  // background: -o-linear-gradient(right,#202040 , blue); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(right,#202040 , blue); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(to right,#202040 , blue);  /*Standard syntax */
+// }
 
 		.header h2{
 			text-align: center;
@@ -48,7 +56,8 @@
 .create-survey,
 .survey-results,
 .user-home-page{
-	background-color:#e9eef1;
+
+	background-color: #ffffff;
 	margin-top: 9em;
 	padding: 1.5em;
 	min-width: 320px;

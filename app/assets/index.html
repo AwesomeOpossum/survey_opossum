@@ -49,6 +49,7 @@
         <input type="text" class="input-data" placeholder="Survey Title"><br>
 
         <label class="text">Please provide a brief description of your survey:</label><br>
+
         <input type="text" class="input-data" placeholder="Survey Description"><br>
       <!--</div>-->
       <!-- Yes or No -->
@@ -72,6 +73,9 @@
 
 
 
+       <!-- <div class="field">
+         <%= f.hidden_field :author_id %>
+       </div> -->
 
 
 
@@ -191,3 +195,38 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
+<!--
+        <label class="text">Yes/No</label>
+
+
+
+        <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
+        <label class="text">Short Answer</label>
+        <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
+        <label class="text">Long Answer</label>
+        <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
+      </div>
+      <div class="question-details">
+        <h3>Required?</h3><br>
+        <%= ff.check_box :required, class:'input-data' %>
+      </div>
+      <div class="field">
+        <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
+      </div>
+    </div>
+
+    <div class="question">
+      <%= ff.text_field :question_text, class:'question-input input-data', placeholder:'Type your question here' %>
+    </div>
+
+  </div> -->
+
+
+
+<!--Footer with New Question, Publish Checkbox and Save Button-->
