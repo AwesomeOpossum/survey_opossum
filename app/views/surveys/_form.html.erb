@@ -1,3 +1,6 @@
+
+
+
 <!--New/Edit Survey Form-->
 <body>
 
@@ -30,18 +33,16 @@
 
     <%= f.text_area :description, class:'input-data', :placeholder => "Survey Description" %>
 
-
-
     <div class="field">
-      <%= f.hidden_field :author_id %>
+      <%= f.hidden_field :author_id, class:"input-data" %>
     </div>
+
 
   <div>
 
     <h3 class="questions">Add your questions here</h3>
 
     <%= f.fields_for(:questions) do |ff| %>
-
 
       <%= ff.number_field :order_number, class: "sort-order"%>
       <%= ff.label :order_number, class: "text" %>Question Number<br>
@@ -50,17 +51,15 @@
       <div class="input data">What type of question would you like to ask?</br>
 
           <label>
-
             Yes or No
               <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
           </label>
 
           <label>
-
             Short Answer
               <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
-
           </label>
+
           <label>Long Answer
               <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
           </label><br>
@@ -68,20 +67,15 @@
           Required answer
             <%= ff.check_box :required, class:'input-data' %>
 
-
           <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
 
 
-      </div>
-
       <input type="text" class="input-data" placeholder="Your Answer Here"><br>
 
-  <% end %>
+      <% end %>
 
 
       <footer class="actions">
-
-        <div class="action-options">
           <span>
           <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
           </span>
@@ -95,9 +89,8 @@
           <span>
           <%= f.button "Save", class:'submit-button' %>
           </span>
-        </div>
-
+      
       </footer>
-
+      </div>
     <% end %>
 </body>

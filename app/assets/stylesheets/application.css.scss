@@ -14,10 +14,13 @@
  *= require_self
  */
 
-
 body{
+	font: normal normal normal 11px/normal '.HelveticaNeueDeskInterface-Regular';
+	font-family: '.HelveticaNeueDeskInterface-Regular';
+	// background-color: #e9eef1;
 	margin-left:auto;
 	margin-right:auto;
+
 	background-color:#bdcbbd;
 }
 
@@ -53,7 +56,8 @@ body{
 .create-survey,
 .survey-results,
 .user-home-page{
-	background-color:#ffffff;
+
+	background-color: #ffffff;
 	margin-top: 9em;
 	padding: 1.5em;
 	min-width: 320px;
