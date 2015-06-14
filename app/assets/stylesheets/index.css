@@ -4,6 +4,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white;
+
 }
 
 
@@ -11,7 +12,7 @@
 	font-size: 1.5em;
 	padding: 1em;
 	margin: .5em;
-	background-color: blue;
+	background-color:#202040;
 	color: white;
 	font-weight: bold;
 	border: none;
@@ -20,8 +21,12 @@
 
 td{
 	color: #8b8e90;
-	padding: .5em;
-	margin: .5em;
+	padding: .25em;
+	margin: .25em;
+	height: 3em;
 	border: none;
-	font-size: 1.5em;
+}
+
+.user-edit{
+	margin: .1;
 }

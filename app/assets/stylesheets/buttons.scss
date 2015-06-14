@@ -1,46 +1,72 @@
+
+
 // BUTTONS
 
 .button-box{
-	text-align: center;
+    text-align: center;
 }
 
 button{
-	color: #ffffff;
-	font-size: 1em;
-	padding: .5em;
-	border-style: none;
-	margin: 1em;
+    color: #ffffff ;
+    font-size: 1em;
+    padding: .75em;
+    border-style: none;
+    margin: 1em;
 }
 
 button:focus{
-	outline:none;
+    outline:none;
 }
 
 .submit-button{
-    background-color:#f20c60 ;
+   background-color:#f20c60  ;
 }
 
 
 .new-account-button{
-    background-color:#1d3654 ;
+   background-color:#1d3654  ;
 }
 
 
 .add-button{
-    background-color:orange;
+   background-color:orange;
 }
 
+.submit-button:hover{
+    background-color:#c1094c ;
+}
+
+.new-account-button:hover{
+    background-color:blue;
+}
+
+.add-button:hover{
+    background:#ff7400 ;
+}
+
+
 .submit-button:active{
-	background-color:#c1094c;
+    background-color:#c1094c ;
 }
 
 .new-account-button:active{
-	background-color:blue;
+    background-color:blue;
 }
 
 .add-button:active{
-	background:#ff7400;
+    background:#ff7400 ;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -50,18 +76,33 @@ button:focus{
 
 
 .link{
-	text-decoration: none;
-	color: #ffffff;
-	font-size: 1em;
-	padding: .5em;
-	border-style: none;
-	margin: 1em;
+    text-decoration: none;
+    color: #ffffff ;
+    font-size: 1em;
+    padding: .75em;
+    border-style: none;
+    margin: 1em;
 }
 
 .newpage{
-	background-color:orange;
+    background-color:orange;
 }
 
+.newpage:hover{
+    background:#ff7400 ;
+}
+
+
 .newpage:active{
-	background:#ff7400;
+    background:#ff7400 ;
+}
+
+
+.user-edit{
+	background-color:#cccccc;
+	border-radius: .8em;
+	padding: .5em;
+	margin: .1;
+
+
 }

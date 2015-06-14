@@ -1,6 +1,16 @@
 // FORMS
 
+h1{
+	margin-left: 3%;
+	font-size: 3em;
+	color: #ffffff;
+	// color:#839883;
+}
 
+.logo{
+	width: 600px;
+	height: 500px;
+}
 
 
 form h2{
@@ -32,6 +42,12 @@ form h3{
 
 
 // QUESTIONS
+
+
+.sort-order{
+	width: 3em;
+	margin-bottom: 2em;
+}
 
 .question-box{
 	background-color: #D55C3D;

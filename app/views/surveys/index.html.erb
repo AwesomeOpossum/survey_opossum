@@ -1,13 +1,20 @@
+<body>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <header class=header>
-  <h2>Your Surveys</h2>
+  <h1>SurveySomething</h1>
+
+  <!-- <img src="stylesheets/surveyletters.jpg" alt="Smiley face" height="460" width="330" class="logo"> -->
+
 </header>
 
   <form class="user-home-page">
         <div class="button-box">
            <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
-           <%= button_tag 'Log Out', :class=> 'submit-button' %>
+           <%= button_tag 'Log Out', :class=> 'button submit-button' %>
    <table rules="none" class="table">
       <thead>
         <tr >
@@ -29,9 +36,9 @@
               <td><%= survey.title %></td>
               <!-- <td><%= survey.description %></td> -->
               <td><%= survey.description %></td>
-              <td><%= link_to 'Show', survey %></td>
-              <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
-              <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Show', survey, :class => "link user-edit" %></td>
+              <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit"%></td>
+              <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit" %></td>
             </tr>
          <% end %>
     </tbody>
@@ -40,3 +47,4 @@
      <br>
 
     </form>
+  </body>
