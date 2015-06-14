@@ -22,7 +22,7 @@ class SurveysControllerTest < ActionController::TestCase
       post :create, survey: { author_id: @survey.author_id, description: @survey.description, publish: @survey.publish, title: @survey.title }
     end
 
-    assert_redirected_to survey_path(assigns(:survey))
+    assert_redirected_to surveys_path
   end
 
   test "should show survey" do
@@ -37,7 +37,7 @@ class SurveysControllerTest < ActionController::TestCase
 
   test "should update survey" do
     patch :update, id: @survey, survey: { author_id: @survey.author_id, description: @survey.description, publish: @survey.publish, title: @survey.title }
-    assert_redirected_to survey_path(assigns(:survey))
+    assert_redirected_to surveys_path
   end
 
   test "should destroy survey" do
