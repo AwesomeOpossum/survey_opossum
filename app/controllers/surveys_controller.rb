@@ -22,7 +22,7 @@ class SurveysController < ApplicationController
     @survey = Survey.new(survey_params)
     @survey.author_id = session[:user_id]
     if @survey.save
-      redirect_to edit_survey_path(@survey), notice: 'Survey was successfully created.'
+      redirect_to surveys_url, notice: 'Survey was successfully created.'
     else
       render :new
     end
@@ -30,7 +30,7 @@ class SurveysController < ApplicationController
 
   def update
     if @survey.update(survey_params)
-      redirect_to edit_survey_path(@survey), notice: 'Survey was successfully updated.'
+      redirect_to surveys_url, notice: 'Survey was successfully updated.'
     else
       render :edit
     end
