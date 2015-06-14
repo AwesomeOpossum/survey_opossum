@@ -1,9 +1,9 @@
 class SurveysController < ApplicationController
+  before_action :logged_in?
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
 
   def index
-
-    @surveys = Survey.all
+    @surveys = @author.surveys
   end
 
   def show
@@ -40,6 +40,17 @@ class SurveysController < ApplicationController
     redirect_to surveys_url, notice: 'Survey was successfully destroyed.'
   end
 
+
+  def logged_in?
+  if session[:user_type] == "parent" || session[:user_type] == "student"
+    redirect_to login_path, notice: "You can't view that page"
+  else
+    true
+  end
+end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_survey
@@ -51,5 +62,12 @@ class SurveysController < ApplicationController
       params.require(:survey).permit(:title, :description, :author_id, :publish,
           questions_attributes: [:id, :question_text, :question_type, :required,
           :order_number, :_destroy])
+    end
+
+    def logged_in?
+      @author = Author.find_by_id(session[:user_id])
+      unless @author
+        redirect_to login_path, notice: "Please login"
+      end
     end
 end
