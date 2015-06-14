@@ -7,10 +7,10 @@ h1{
 	// color:#839883;
 }
 
-.logo{
-	width: 600px;
-	height: 500px;
-}
+// .logo{
+// 	width: 600px;
+// 	height: 500px;
+// }
 
 
 form h2{
@@ -27,15 +27,17 @@ form h3{
 //SURVEY DETAILS
 
 
-.survey-details label{
-  text-align: center;
+.survey-details{
+// padding-bottom:2em auto;
+margin-bottom: 2em;
+
 }
 
-.survey-details input,
-.survey-details textarea{
-  display: block;
-  margin: auto;
-}
+// .survey-details input,
+// .survey-details textarea{
+//   display: block;
+//   margin: auto;
+// }
 
 
 
@@ -43,10 +45,20 @@ form h3{
 
 // QUESTIONS
 
+.add-question{
+	margin: 2em;
+	padding: 2em;
+}
 
+
+.newquestion{
+	margin-top:.2em;
+	margin-bottom:.2em;
+
+}
 .sort-order{
 	width: 3em;
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
 }
 
 .question-box{
@@ -70,10 +82,9 @@ form h3{
 
 .question-input{
   padding: .5em;
-  text-align: center;
   width: 90%;
 	display: block;
-	margin: auto;
+
 }
 
 .radio{
@@ -112,14 +123,4 @@ input:focus{
 
 .destroy-checkbox{
   display: none;
-}
-
-.publish{
-	text-decoration: none;
-	background-color: orange;
-	color: #ffffff;
-	font-size: 1em;
-	padding: .5em;
-	border-style: none;
-	margin: 1em;
 }

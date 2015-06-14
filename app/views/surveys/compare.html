@@ -1,5 +1,6 @@
-<!-- New/Edit Survey Form -->
 
+<!-- New/Edit Survey Form -->
+<!-- <body> -->
 
 
 <%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
@@ -19,12 +20,10 @@
 
 
 
+<input type="text" class="input-data", placeholder="Survey Description"><br>
 
 
-<div class="survey-details">
-
-
-  <label class="text">Tell us the name of your survey:</label><br>
+<label class="text">Tell us the name of your survey:</label><br>
 
     <%= f.text_field :title, class: "input-data", :placeholder => "Survey Title"%><br>
 
@@ -37,36 +36,19 @@
     </div>
 
 
-  </div>
+  <div class="add-question">
 
     <h3 class="questions">Add your questions here</h3>
 
-
-
-
-
-
+     <!-- <script type="text/html" id="question-template"> -->
 
      <%= f.fields_for(:questions) do |ff| %>
 
+      <%= ff.number_field :order_number, class: "sort-order"%>
+      <%= ff.label :order_number, class: "text" %>Question Number<br>
 
 
-
-
-
-   <!-- <script type="text/html" id="question-template"> -->
-   <div class="add-question">
-
-
-
-
-
-
-        <%= ff.number_field :order_number, class: "sort-order"%>
-        <label class="question">Question Number</label>
-
-
-      <div class="text">What type of question would you like to ask?</br>
+      <div class="input data">What type of question would you like to ask?</br>
 
           <label>
             Yes or No
@@ -87,11 +69,10 @@
 
           <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
 
-          <%= ff.text_field :question_text, class:'question-input', placeholder:'Type your question here' %>
-    </div>
 
+      <input type="text" class="input-data" placeholder="Your Question Here"><br>
   </div>
-  <!-- </script> -->
+<!-- </script> -->
 <% end %>
 
 
@@ -101,7 +82,7 @@
           </span>
 
           <span>
-          <label class="text publish">Publish
+          <label class="text add-button">Publish
           <%= f.check_box :publish %>
           </label>
           </span>
@@ -111,6 +92,6 @@
           </span>
 
       </footer>
-
-
+      </div>
+      </body>
     <% end %>
