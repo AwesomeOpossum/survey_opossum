@@ -21,7 +21,7 @@ class SurveysController < ApplicationController
   def create
     @survey = Survey.new(survey_params)
     if @survey.save
-      redirect_to @survey, notice: 'Survey was successfully created.'
+      redirect_to edit_survey_path(@survey), notice: 'Survey was successfully created.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class SurveysController < ApplicationController
 
   def update
     if @survey.update(survey_params)
-      redirect_to @survey, notice: 'Survey was successfully updated.'
+      redirect_to edit_survey_path(@survey), notice: 'Survey was successfully updated.'
     else
       render :edit
     end
