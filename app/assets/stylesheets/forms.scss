@@ -5,13 +5,75 @@
 
 form h2{
 	text-align: center;
+	margin: 0;
 }
 
 form h3{
   text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+//SURVEY DETAILS
+
+
+.survey-details label{
+  text-align: center;
+}
+
+.survey-details input,
+.survey-details textarea{
+  display: block;
+  margin: auto;
 }
 
 
+
+
+
+// QUESTIONS
+
+.question-box{
+	background-color: #D55C3D;
+	padding: 1em;
+}
+
+.question-details-container{
+	width: 90%;
+}
+
+.question-details{
+	display: inline-block;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.question-details .input-data{
+  display: inline-block;
+}
+
+.question-input{
+  padding: .5em;
+  text-align: center;
+  width: 90%;
+	display: block;
+	margin: auto;
+}
+
+.radio{
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+
+
+// FOOTER
+
+
+.action-options{
+  margin: auto;
+}
 
 
 // INPUTS
@@ -28,18 +90,6 @@ form h3{
   background-color:#e9eef1;
 }
 
-.question-box{
-	background-color: #D55C3D;
-	padding: 1em;
-}
-
-.question-details-container{
-}
-
-.question-details .input-data{
-  display: inline;
-}
-
 input:focus{
 	outline: none;
 }
@@ -48,8 +98,12 @@ input:focus{
   display: none;
 }
 
-.question-input{
-  padding: .5em;
-  text-align: center;
-  width: 90%;
+.publish{
+	text-decoration: none;
+	background-color: orange;
+	color: #ffffff;
+	font-size: 1em;
+	padding: .5em;
+	border-style: none;
+	margin: 1em;
 }
