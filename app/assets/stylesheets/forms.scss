@@ -1,123 +1,121 @@
 // FORMS
 
 h1{
-	margin-left: 3%;
-	font-size: 3em;
-	color: #ffffff;
-	// color:#839883;
+    margin-left: 3%;
+    font-size: 3em;
+    color: #ffffff ;
+    // color:#839883 ;
 }
 
-.logo{
-	width: 600px;
-	height: 500px;
-}
+// .logo{
+//     width: 600px;
+//     height: 500px;
+// }
 
 
 form h2{
-	text-align: center;
-	margin: 0;
+    text-align: center;
+    margin: 0;
 }
 
 form h3{
-  text-align: center;
-	margin-top: 0;
-	margin-bottom: 0;
+ text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 //SURVEY DETAILS
 
 
-.survey-details label{
-  text-align: center;
+.survey-details{
+// padding-bottom:2em auto;
+margin-bottom: 2em;
+
 }
-
-.survey-details input,
-.survey-details textarea{
-  display: block;
-  margin: auto;
-}
-
-
 
 
 
 // QUESTIONS
 
+.add-question{
+    margin: 2em;
+    padding: 2em;
+}
+
+
+.newquestion{
+    margin-top:.2em;
+    margin-bottom:.2em;
+}
+
 
 .sort-order{
-	width: 3em;
-	margin-bottom: 2em;
+    width: 3em;
+    margin-bottom: 1.5em;
 }
+
 
 .question-box{
-	padding: 1em;
+    background-color: #D55C3D ;
+    padding: 1em;
 }
+
 
 .question-details-container{
-	width: 90%;
+    width: 90%;
 }
+
 
 .question-details{
-	display: inline-block;
-	margin-left: 1em;
-	margin-right: 1em;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
 }
+
 
 .question-details .input-data{
-  display: inline-block;
+ display: inline-block;
 }
+
 
 .question-input{
-  padding: .5em;
-  text-align: center;
-  width: 90%;
-	display: block;
-	margin: auto;
+ padding: .5em;
+ width: 90%;
+    display: block;
 }
+
 
 .radio{
-	display: inline-block;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
-
 
 
 // FOOTER
-
-
 .action-options{
-  margin: auto;
+ margin: auto;
 }
 
 
 // INPUTS
-
-
 .input-data{
-	border: none;
-	padding: .25em;
-	font-size: 1em;
-	margin-top: .5em;
-	margin-bottom:1.5em;
-  margin-left: auto;
-  margin-right: auto;
-  background-color:#e9eef1;
+    border: none;
+    padding: .25em;
+    font-size: 1em;
+    margin-top: .5em;
+    margin-bottom:1.5em;
+ margin-left: auto;
+ margin-right: auto;
+ background-color:#e9eef1 ;
 }
+
 
 input:focus{
-	outline: none;
+    outline: none;
 }
+
 
 .destroy-checkbox{
-  display: none;
-}
-
-.publish{
-	text-decoration: none;
-	background-color: orange;
-	color: #ffffff;
-	font-size: 1em;
-	padding: .75em;
-	border-style: none;
+ display: none;
 }
