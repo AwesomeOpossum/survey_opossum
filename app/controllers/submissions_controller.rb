@@ -10,9 +10,12 @@ class SubmissionsController < ApplicationController
 
   def new
     @survey = Survey.find_by_id(params[:id])
-    @questions = Question.where(survey_id: params[:id])
+    questions = Question.where(survey_id: @survey.id).order(:order_number)
     @submission = Submission.new
-    @answer = Answer.new
+
+    questions.each do |q|
+      @submission.answers.build(question: q)
+    end
   end
 
   def edit
@@ -49,6 +52,6 @@ class SubmissionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def submission_params
       params.require(:submission).permit(answers_attributes: [:id, :answer,
-          :question_id, :submission_id])
+          :question_id, :submission_id, :survey_id])
     end
 end
