@@ -43,43 +43,44 @@
 
   <div class="js-questions-container">
 
+    <div>
     <%= f.fields_for(:questions) do |ff| %>
-
-    <div class="new-question">
-
-      <%= ff.number_field :order_number, class: "sort-order"%>
-      <label class="question">Question Number</label>
-
-
-      <div class="text">What type of question would you like to ask?</br>
-
-         <label>
-           Yes or No
-             <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
-         </label>
-
-         <label>
-           Short Answer
-             <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
-         </label>
-
-         <label>Long Answer
-             <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
-         </label><br>
-
-         <label>Required answer
-         <%= ff.check_box :required, class:'input-data' %>
-         </label>
-
-         <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
-
-         <%= ff.text_field :question_text, class:'question-input', placeholder:'Type your question here' %>
-
       </div>
+      <div class="new-question">
 
-    </div>
+        <%= ff.number_field :order_number, class: "sort-order"%>
+        <label class="question">Question Number</label>
+
+
+        <div class="text">What type of question would you like to ask?</br>
+
+           <label>
+             Yes or No
+               <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
+           </label>
+
+           <label>
+             Short Answer
+               <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
+           </label>
+
+           <label>Long Answer
+               <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
+           </label><br>
+
+           <label>Required answer
+           <%= ff.check_box :required, class:'input-data' %>
+           </label>
+
+           <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
+
+           <%= ff.text_field :question_text, class:'question-input', placeholder:'Type your question here' %>
+
+        </div>
 
     <% end %>
+
+    </div>
 
   </div>
 
