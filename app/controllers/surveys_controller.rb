@@ -15,10 +15,10 @@ class SurveysController < ApplicationController
   end
 
   def edit
-    if @survey.questions.first.answers.all.count > 1
-      redirect_to surveys_url, notice: "You can't edit this survey because answers have been submitted"
-    else
+    if @survey.questions.any? { |a| a.answers.all.count == 0}
       @survey.questions.build
+    else
+      redirect_to root_url, notice: "You can't edit this survey because answers have been submitted"
     end
   end
 

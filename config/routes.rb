@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :authors
   resources :surveys
 
-  get 'surveys/takesurvey/:id' => 'submissions#new'
+  get 'takesurvey/:id' => 'submissions#new'
 
   root 'surveys#index'
 
