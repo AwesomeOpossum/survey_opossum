@@ -4,5 +4,6 @@ class Question < ActiveRecord::Base
 
   validates :question_text, presence: true
   validates :question_type, presence: true
+  validates :order_number, uniqueness: true
 
 end
