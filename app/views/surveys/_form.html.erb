@@ -41,16 +41,14 @@
   <h3 class="questions">Add your questions here</h3>
 
 
-  <div class="js-questions-container">
+  <div class="questions-container">
 
-    <div>
     <%= f.fields_for(:questions) do |ff| %>
-      </div>
-      <div class="new-question">
+
+      <div class="question-fields">
 
         <%= ff.number_field :order_number, class: "sort-order"%>
-        <label class="question">Question Number</label>
-
+        <label>Question Number</label>
 
         <div class="text">What type of question would you like to ask?</br>
 
@@ -68,6 +66,9 @@
                <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
            </label><br>
 
+           <button class"up">Up</button>
+           <button class"down">Down</button><br>
+
            <label>Required answer
            <%= ff.check_box :required, class:'input-data' %>
            </label>
@@ -78,13 +79,11 @@
 
         </div>
 
+      </div>
+
     <% end %>
 
-    </div>
-
   </div>
-
-
 
 
      <footer class="actions">
