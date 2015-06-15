@@ -3,10 +3,6 @@ class Survey < ActiveRecord::Base
   has_many :questions, dependent: :destroy
 
   validates :title, presence: true
-  validates :description, presence: true
-  validates :author_id, presence: true
-  
-
 
   accepts_nested_attributes_for :questions,
       reject_if: proc { |attributes| attributes['question_text'].blank? },
