@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <header class=header>
-  <h1>SurveySomething</h1>
+  <h1><%= @author.name %>'s Surveys</h1>
 
   <!-- <img src="stylesheets/surveyletters.jpg" alt="Smiley face" height="460" width="330" class="logo"> -->
 
@@ -34,11 +34,11 @@
               <td><%= survey.description %></td>
               <!-- <td><%= survey.description %></td> -->
               <% if survey.publish == true %>
-                <td><a href=<%= "#{request.original_url}/takesurvey/#{survey.id}"%>>Take Survey</a></td>
+                <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
               <% else %>
                 <td> Survey not published. </td>
               <% end %>
-              <td><%= link_to 'Show', survey, :class => "link user-edit" %></td>
+              <td><%= link_to 'View Results', survey, :class => "link user-edit" %></td>
               <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit"%></td>
               <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit" %></td>
             </tr>

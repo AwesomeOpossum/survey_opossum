@@ -47,8 +47,8 @@
 
       <div class="question-fields">
 
-        <%= ff.number_field :order_number, class: "sort-order"%>
-        <label>Question Number</label>
+        <%= ff.number_field :order_number, class: "sort-order", min: 1 %>
+        <label class="question">Question Number</label>
 
         <div class="text">What type of question would you like to ask?</br>
 
