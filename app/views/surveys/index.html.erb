@@ -15,9 +15,9 @@
    <table rules="none" class="table">
       <thead>
         <tr >
-          <th class="table-header">Published</th>
+          <!-- <th class="table-header">Published</th> -->
           <th class="table-header">Survey Title</th>
-          <!-- <th class="table-header">Description</th> -->
+          <th class="table-header">Description</th>
           <th class="table-header url">Link to Survey</th>
           <th class="table-header"></th>
           <th class="table-header"></th>
@@ -29,10 +29,15 @@
       <tbody>
           <% @surveys.each do |survey| %>
             <tr>
-              <td><%= survey.publish %></td>
+              <!-- <td><%= survey.publish %></td> -->
               <td><%= survey.title %></td>
-              <!-- <td><%= survey.description %></td> -->
               <td><%= survey.description %></td>
+              <!-- <td><%= survey.description %></td> -->
+              <% if survey.publish == true %>
+                <td></td> <!--will have link here-->
+              <% else %>
+                <td> Survey not published. </td>
+              <% end %>
               <td><%= link_to 'Show', survey, :class => "link user-edit" %></td>
               <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit"%></td>
               <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit" %></td>
