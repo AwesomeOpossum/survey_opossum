@@ -1,16 +1,11 @@
 $(function(){
 
-   $('.add-button').on('click', function(){
+  var newQuestion = $('#templateId').html();
 
-     var newQuestion=$("#question-template").html();
+ $('.add-button').on('click', function(){
 
-     console.log('button works!');
+   $('.js-questions-container').append(newQuestion);
 
-   });
-
-
-
-
-
+  });
 
 });
