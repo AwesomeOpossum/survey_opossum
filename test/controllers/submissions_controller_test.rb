@@ -2,6 +2,7 @@ require 'test_helper'
 
 class SubmissionsControllerTest < ActionController::TestCase
   setup do
+    @survey = surveys(:one)
     @submission = submissions(:one)
   end
 
@@ -12,13 +13,14 @@ class SubmissionsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, id: @survey.id
     assert_response :success
   end
 
   test "should create submission" do
     assert_difference('Submission.count') do
-      post :create, submission: {  }
+      post :create, submission: { answers_attributes: [:id, :answer,
+          :question_id, :submission_id, :survey_id] }
     end
 
     assert_redirected_to submission_path(assigns(:submission))
@@ -35,7 +37,8 @@ class SubmissionsControllerTest < ActionController::TestCase
   end
 
   test "should update submission" do
-    patch :update, id: @submission, submission: {  }
+    patch :update, id: @submission, submission: { answers_attributes: [:id, :answer,
+        :question_id, :submission_id, :survey_id] }
     assert_redirected_to submission_path(assigns(:submission))
   end
 
