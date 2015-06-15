@@ -3,6 +3,6 @@ class Author < ActiveRecord::Base
   has_many :surveys
 
   validates :name, presence: true
-  validates :email, presence: true # need uniqueness validation, but fails controller test
+  validates :email, presence: true, uniqueness: true
   validates :password, presence: true
 end
