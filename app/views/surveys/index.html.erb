@@ -34,7 +34,7 @@
               <td><%= survey.description %></td>
               <!-- <td><%= survey.description %></td> -->
               <% if survey.publish == true %>
-                <td><a href=<%= "#{request.original_url}/takesurvey/#{survey.id}"%>>Take Survey</a></td>
+                <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
               <% else %>
                 <td> Survey not published. </td>
               <% end %>
