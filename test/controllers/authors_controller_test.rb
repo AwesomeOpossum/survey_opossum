@@ -30,7 +30,7 @@ class AuthorsControllerTest < ActionController::TestCase
   end
 
   test "should update author" do
-    patch :update, id: @author, author: { email: @author.email, name: @author.name }
+    patch :update, id: @author, author: { email: @author.email, name: @author.name, password: "password" }
     assert_redirected_to surveys_url
   end
 
