@@ -15,7 +15,11 @@ class SurveysController < ApplicationController
   end
 
   def edit
-    @survey.questions.build
+    # if @survey.questions.first.answers.all.count > 1
+    #   flash.now[:notice] = "You can't edit this survey because answers have been submitted"
+    # else
+      @survey.questions.build
+    # end
   end
 
   def create
