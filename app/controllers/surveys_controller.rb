@@ -9,8 +9,6 @@ class SurveysController < ApplicationController
   def show
     @survey = Survey.find_by_id(params[:id])
     @questions = Question.where(survey_id: @survey.id).order(:order_number)
-    
-
   end
 
   def new
@@ -19,17 +17,19 @@ class SurveysController < ApplicationController
   end
 
   def edit
-    if @survey.questions.any? { |a| a.answers.count == 0}
-      @survey.questions.build
-    else
+    if @survey.questions.any? { |q| q.answers.count != 0}
       redirect_to root_url, notice: "You can't edit this survey because answers have been submitted"
+    else
+      @survey.questions.build
     end
   end
 
   def create
     @survey = Survey.new(survey_params)
     @survey.author_id = session[:user_id]
-    if @survey.save
+    if @survey.questions.count == 0 && @survey.publish == true
+      redirect_to new_survey_path, notice: "Can't publish survey with no questions."
+    elsif @survey.save
       redirect_to root_url, notice: 'Survey was successfully created.'
     else
       render :new

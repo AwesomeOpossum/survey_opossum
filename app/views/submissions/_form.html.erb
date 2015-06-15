@@ -23,8 +23,10 @@
 
     <% if q.question_type == "Yes/No" %>
       <div class="field">
-        <%= ff.label :answer %><br>
-        <%= ff.select :answer, options_for_select(["Yes", "No"]), include_blank: 'Please Select' %>
+        <%= ff.label :answer, 'Yes' %>
+        <%= ff.radio_button :answer, 'Yes', class:'input-data' %>
+        <%= ff.label :answer, 'No' %>
+        <%= ff.radio_button :answer, 'No', class:'input-data' %><br
       </div>
     <% elsif q.question_type == "Short Answer" %>
       <div class="field">

@@ -32,7 +32,7 @@ class SurveysControllerTest < ActionController::TestCase
 
   test "should get edit" do
     get :edit, id: @survey
-    assert_redirected_to root_path
+    assert_response :success
   end
 
   test "should update survey" do
