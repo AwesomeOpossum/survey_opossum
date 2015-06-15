@@ -13,7 +13,7 @@
 
   <%= f.fields_for(:answers) do |ff| %>
     <% q = ff.object.question %>
-    <%= ff.hidden_field :question_id %>
+    <%= ff.hidden_field :question_id, value: q.id %>
     <%= q.question_text %>
     <% if q.required == true %>
       <div> (Required) </div>
