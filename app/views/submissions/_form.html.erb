@@ -11,7 +11,9 @@
     </div>
   <% end %>
 
-  <% @survey.questions.order(:order_number).each do |q| %>
+  <%= f.fields_for(:answers) do |ff| %>
+    <% q = ff.object.question %>
+    <%= ff.hidden_field :question_id, value: q.id %>
     <%= q.question_text %>
     <% if q.required == true %>
       <div> (Required) </div>
@@ -19,35 +21,21 @@
       <div> (Optional) </div>
     <% end %>
 
-    <%= fields_for(@answer) do |ff| %>
-      <% if @answer.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
-
-          <ul>
-          <% @answer.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-
-      <% if q.question_type == "Yes/No" %>
-        <div class="field">
-          <%= ff.label :answer %><br>
-          <%= ff.select :answer, options_for_select(["Yes", "No"]), include_blank: 'Please Select' %>
-        </div>
-      <% elsif q.question_type == "Short Answer" %>
-        <div class="field">
-          <%= ff.label :answer %><br>
-          <%= ff.text_field :answer %>
-        </div>
-      <% elsif q.question_type == "Long Answer" %>
-        <div class="field">
-          <%= ff.label :answer %><br>
-          <%= ff.text_area :answer %>
-        </div>
-      <% end %>
+    <% if q.question_type == "Yes/No" %>
+      <div class="field">
+        <%= ff.label :answer %><br>
+        <%= ff.select :answer, options_for_select(["Yes", "No"]), include_blank: 'Please Select' %>
+      </div>
+    <% elsif q.question_type == "Short Answer" %>
+      <div class="field">
+        <%= ff.label :answer %><br>
+        <%= ff.text_field :answer %>
+      </div>
+    <% elsif q.question_type == "Long Answer" %>
+      <div class="field">
+        <%= ff.label :answer %><br>
+        <%= ff.text_area :answer %>
+      </div>
     <% end %>
   <% end %>
 
