@@ -7,6 +7,10 @@ class SurveysController < ApplicationController
   end
 
   def show
+    @survey = Survey.find_by_id(params[:id])
+    @questions = Question.where(survey_id: @survey.id).order(:order_number)
+    
+
   end
 
   def new

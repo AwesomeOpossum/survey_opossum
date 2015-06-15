@@ -38,7 +38,7 @@
               <% else %>
                 <td> Survey not published. </td>
               <% end %>
-              <td><%= link_to 'Show', survey, :class => "link user-edit" %></td>
+              <td><%= link_to 'View Results', survey, :class => "link user-edit" %></td>
               <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit"%></td>
               <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit" %></td>
             </tr>
