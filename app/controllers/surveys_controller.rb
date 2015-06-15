@@ -15,11 +15,11 @@ class SurveysController < ApplicationController
   end
 
   def edit
-    # if @survey.questions.first.answers.all.count > 1
-    #   flash.now[:notice] = "You can't edit this survey because answers have been submitted"
-    # else
+    if @survey.questions.first.answers.all.count > 1
+      redirect_to surveys_url, notice: "You can't edit this survey because answers have been submitted"
+    else
       @survey.questions.build
-    # end
+    end
   end
 
   def create
