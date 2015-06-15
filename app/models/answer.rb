@@ -4,5 +4,4 @@ class Answer < ActiveRecord::Base
 
   validates_presence_of :answer, :if => Proc.new { |a| a.question.required == true }
 
-
 end
