@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:3000/surveys/16/edit -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>SurveyOpossum</title>
+  <link rel="stylesheet" media="all" href="http://localhost:3000/assets/buttons.self-87f95a28cdadccc131a23904bd997a6d394fbbbf31de949e74c9946b03d792f6.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/forms.self-8cfe146fc70f6efb9a5775fcf646051feceb4b89e5c7d2837d6a462d87f22f93.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/index.self-2b33b057ad16070e3b1e5b0eb66a8c26f7139b7049550239593b4c96072601b7.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/scaffolds.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/surveys.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1">
+<link rel="stylesheet" media="all" href="http://localhost:3000/assets/application.self-6effd72a1097820fdd996e4bf81174b3a5019686c7fd1b0abcb6b4c8841ea546.css?body=1">
+  <script src="./SurveyOpossum_files/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js"></script>
+<script src="./SurveyOpossum_files/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js"></script>
+<script src="./SurveyOpossum_files/form.self-de920735747f3709c2bb0afb18bcef1148c77ceb89d125071592c935206a3e62.js"></script>
+<script src="./SurveyOpossum_files/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./SurveyOpossum_files/surveys.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./SurveyOpossum_files/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ow/Bu0KdlFy2c0IgskID0CKHKy8l1WFJGpNCqcEjXh6GrBYxvpZi1nzDJWYVyCIb+DB/br5toc57Tzx9mvmMOA==">
+</head>
+<body>
+
+<a href="http://localhost:3000/sessions/logout">Logout</a>
+
+<header class="header">
+  <h1>Edit</h1>
+</header>
+
+<!-- New/Edit Survey Form -->
+
+
+
+<form class="create-survey" id="edit_survey_16" action="http://localhost:3000/surveys/16" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="ow/Bu0KdlFy2c0IgskID0CKHKy8l1WFJGpNCqcEjXh6GrBYxvpZi1nzDJWYVyCIb+DB/br5toc57Tzx9mvmMOA==">
+
+<!-- Survey Details -->
+
+
+
+
+
+<div class="survey-details">
+
+
+  <label class="text">Tell us the name of your survey:</label><br>
+
+    <input class="input-data" placeholder="Survey Title" type="text" value="test id number" name="survey[title]" id="survey_title"><br>
+
+  <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
+
+    <textarea class="input-data" placeholder="Survey Description" name="survey[description]" id="survey_description">adsfads</textarea>
+
+    <div class="field">
+      <input class="input-data" type="hidden" value="2" name="survey[author_id]" id="survey_author_id">
+    </div>
+
+
+  </div>
+
+    <h3 class="questions">Add your questions here</h3>
+
+     
+
+
+
+
+
+
+
+
+   <!-- <script type="text/html" id="question-template"> -->
+
+   <div class="add-question">
+
+     <div class="new-element-template">
+
+          <input class="sort-order" type="number" value="3" name="survey[questions_attributes][0][order_number]" id="survey_questions_attributes_0_order_number">
+          <label class="question">Question Number</label>
+
+
+        <div class="text">What type of question would you like to ask?<br>
+
+            <label>
+              Yes or No
+                <input class="input-data" type="radio" value="Yes/No" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_yesno">
+            </label>
+
+            <label>
+              Short Answer
+                <input class="input-data" type="radio" value="Short Answer" checked="checked" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_short_answer">
+            </label>
+
+            <label>Long Answer
+                <input class="input-data" type="radio" value="Long Answer" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_long_answer">
+            </label><br>
+
+            Required answer
+              <input name="survey[questions_attributes][0][required]" type="hidden" value="0"><input class="input-data" type="checkbox" value="1" name="survey[questions_attributes][0][required]" id="survey_questions_attributes_0_required">
+
+            <input name="survey[questions_attributes][0][_destroy]" type="hidden" value="0"><input class="destroy-checkbox" type="checkbox" value="1" name="survey[questions_attributes][0][_destroy]" id="survey_questions_attributes_0__destroy">
+
+            <input class="question-input" placeholder="Type your question here" type="text" value="q3" name="survey[questions_attributes][0][question_text]" id="survey_questions_attributes_0_question_text">
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+<div class="append">
+
+
+
+     <div class="new-element-template">
+
+          <input class="sort-order" type="number" value="3" name="survey[questions_attributes][0][order_number]" id="survey_questions_attributes_0_order_number">
+          <label class="question">Question Number</label>
+
+
+        <div class="text">What type of question would you like to ask?<br>
+
+            <label>
+              Yes or No
+                <input class="input-data" type="radio" value="Yes/No" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_yesno">
+            </label>
+
+            <label>
+              Short Answer
+                <input class="input-data" type="radio" value="Short Answer" checked="checked" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_short_answer">
+            </label>
+
+            <label>Long Answer
+                <input class="input-data" type="radio" value="Long Answer" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_long_answer">
+            </label><br>
+
+            Required answer
+              <input name="survey[questions_attributes][0][required]" type="hidden" value="0"><input class="input-data" type="checkbox" value="1" name="survey[questions_attributes][0][required]" id="survey_questions_attributes_0_required">
+
+            <input name="survey[questions_attributes][0][_destroy]" type="hidden" value="0"><input class="destroy-checkbox" type="checkbox" value="1" name="survey[questions_attributes][0][_destroy]" id="survey_questions_attributes_0__destroy">
+
+            <input class="question-input" placeholder="Type your question here" type="text" value="q3" name="survey[questions_attributes][0][question_text]" id="survey_questions_attributes_0_question_text">
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- </script> -->
+<input type="hidden" value="9" name="survey[questions_attributes][0][id]" id="survey_questions_attributes_0_id">
+
+
+
+
+
+
+
+
+   <!-- <script type="text/html" id="question-template"> -->
+
+   <div class="add-question">
+
+     <div class="new-element-template">
+
+          <input class="sort-order" type="number" name="survey[questions_attributes][7][order_number]" id="survey_questions_attributes_1_order_number">
+          <label class="question">Question Number</label>
+
+
+        <div class="text">What type of question would you like to ask?<br>
+
+            <label>
+              Yes or No
+                <input class="input-data" type="radio" value="Yes/No" name="survey[questions_attributes][1][question_type]" id="survey_questions_attributes_1_question_type_yesno">
+            </label>
+
+            <label>
+              Short Answer
+                <input class="input-data" type="radio" value="Short Answer" name="survey[questions_attributes][1][question_type]" id="survey_questions_attributes_1_question_type_short_answer">
+            </label>
+
+            <label>Long Answer
+                <input class="input-data" type="radio" value="Long Answer" name="survey[questions_attributes][1][question_type]" id="survey_questions_attributes_1_question_type_long_answer">
+            </label><br>
+
+            Required answer
+              <input name="survey[questions_attributes][1][required]" type="hidden" value="0"><input class="input-data" type="checkbox" value="1" name="survey[questions_attributes][1][required]" id="survey_questions_attributes_1_required">
+
+            <input name="survey[questions_attributes][1][_destroy]" type="hidden" value="0"><input class="destroy-checkbox" type="checkbox" value="1" name="survey[questions_attributes][1][_destroy]" id="survey_questions_attributes_1__destroy">
+
+            <input class="question-input" placeholder="Type your question here" type="text" name="survey[questions_attributes][1][question_text]" id="survey_questions_attributes_1_question_text">
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+<div class="append">
+
+
+
+     <div class="new-element-template">
+
+          <input class="sort-order" type="number" value="3" name="survey[questions_attributes][0][order_number]" id="survey_questions_attributes_0_order_number">
+          <label class="question">Question Number</label>
+
+
+        <div class="text">What type of question would you like to ask?<br>
+
+            <label>
+              Yes or No
+                <input class="input-data" type="radio" value="Yes/No" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_yesno">
+            </label>
+
+            <label>
+              Short Answer
+                <input class="input-data" type="radio" value="Short Answer" checked="checked" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_short_answer">
+            </label>
+
+            <label>Long Answer
+                <input class="input-data" type="radio" value="Long Answer" name="survey[questions_attributes][0][question_type]" id="survey_questions_attributes_0_question_type_long_answer">
+            </label><br>
+
+            Required answer
+              <input name="survey[questions_attributes][0][required]" type="hidden" value="0"><input class="input-data" type="checkbox" value="1" name="survey[questions_attributes][0][required]" id="survey_questions_attributes_0_required">
+
+            <input name="survey[questions_attributes][0][_destroy]" type="hidden" value="0"><input class="destroy-checkbox" type="checkbox" value="1" name="survey[questions_attributes][0][_destroy]" id="survey_questions_attributes_0__destroy">
+
+            <input class="question-input" placeholder="Type your question here" type="text" value="q3" name="survey[questions_attributes][0][question_text]" id="survey_questions_attributes_0_question_text">
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+  <!-- </script> -->
+
+
+
+
+      <footer class="actions">
+          <span>
+          <button name="button" type="button" class="add-button">Add New Question</button>
+          </span>
+
+          <span>
+          <label class="text publish">Publish
+          <input name="survey[publish]" type="hidden" value="0"><input type="checkbox" value="1" name="survey[publish]" id="survey_publish">
+          </label>
+          </span>
+
+          <span>
+          <button name="button" type="submit" class="submit-button">Save</button>
+          </span>
+
+      </footer>
+
+
+</form>
+
+<a class="ui-button-text button_text" href="http://localhost:3000/surveys/16">Show</a> |
+<a href="http://localhost:3000/surveys">Back</a>
+
+
+
+
+</body></html>
