@@ -1,6 +1,7 @@
 class Answer < ActiveRecord::Base
   belongs_to :question
+  belongs_to :submission
 
-  validates :question_id, presence: true
-  validates :answer, presence: true
+  validates_presence_of :answer, :if => Proc.new { |a| a.question.required == true }
+
 end

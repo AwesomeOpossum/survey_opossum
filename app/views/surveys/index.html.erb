@@ -2,23 +2,33 @@
 <p id="notice"><%= notice %></p>
 
 <header class=header>
-  <h1>SurveySomething</h1>
+  <h1><%= @author.name %>'s Surveys</h1>
 
 </header>
 
 
 
   <form class="user-home-page">
+<<<<<<< HEAD
     <div class="button-box">
        <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
        <%= button_tag 'Log Out', :class=> 'button submit-button' %>
 
 
+=======
+        <div class="button-box">
+           <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
+           <%= link_to 'Log Out', logout_path, class: 'button submit-button' %>
+>>>>>>> 3956f397fc174988db0319b39effde739de53327
    <table rules="none" class="table">
       <thead>
         <tr >
-          <th class="table-header">Published</th>
+          <!-- <th class="table-header">Published</th> -->
           <th class="table-header">Survey Title</th>
+<<<<<<< HEAD
+=======
+          <th class="table-header">Description</th>
+>>>>>>> 3956f397fc174988db0319b39effde739de53327
           <th class="table-header url">Link to Survey</th>
           <th class="table-header"></th>
           <th class="table-header"></th>
@@ -30,11 +40,16 @@
       <tbody>
           <% @surveys.each do |survey| %>
             <tr>
-              <td><%= survey.publish %></td>
+              <!-- <td><%= survey.publish %></td> -->
               <td><%= survey.title %></td>
-              <!-- <td><%= survey.description %></td> -->
               <td><%= survey.description %></td>
-              <td><%= link_to 'Show', survey, :class => "link user-edit" %></td>
+              <!-- <td><%= survey.description %></td> -->
+              <% if survey.publish == true %>
+                <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
+              <% else %>
+                <td> Survey not published. </td>
+              <% end %>
+              <td><%= link_to 'View Results', survey, :class => "link user-edit" %></td>
               <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit"%></td>
               <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit" %></td>
             </tr>

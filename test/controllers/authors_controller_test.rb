@@ -23,7 +23,7 @@ class AuthorsControllerTest < ActionController::TestCase
 
   test "should create author" do
     assert_difference('Author.count') do
-      post :create, author: { email: @author.email, name: @author.name, password: "password" }
+      post :create, author: { email: "email@email.com", name: @author.name, password: "password" }
     end
 
     assert_redirected_to surveys_url
