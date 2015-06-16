@@ -37,7 +37,9 @@ class SurveysController < ApplicationController
   end
 
   def update
-    if @survey.update(survey_params)
+    if @survey.questions.count == 0 && @survey.publish == true
+      redirect_to edit_survey_path, notice: "Can't publish survey with no questions."
+    elsif @survey.update(survey_params)
       redirect_to root_url, notice: 'Survey was successfully updated.'
     else
       render :edit

@@ -4,16 +4,16 @@
 <h2> Viewing results for <%=@survey.title %></h2>
 
 <div>
-<% @questions.each do |q| %>
-<div>
-<h3><strong><%= q.question_text %></strong></h3>
-</div>
-  <% q.answers.each do |a| %>
-  <div>
-  <%= a.answer %>
-</div>
+  <% @questions.each do |q| %>
+    <div>
+      <h3><strong><%= q.question_text %></strong></h3>
+    </div>
+    <% q.answers.each do |a| %>
+      <div>
+        <%= a.answer %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 </div>
 <br>
 
