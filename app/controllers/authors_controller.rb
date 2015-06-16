@@ -21,7 +21,7 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
       if @author.save
         session[:user_id] = @author.id
-        redirect_to surveys_url, notice: 'Welcome! Create a survey.'
+        redirect_to root_url, notice: 'Welcome! Create a survey.'
       else
         render :new
       end
@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
 
   def update
     if @author.update(author_params)
-      redirect_to surveys_url, notice: 'Your profile was successfully updated.'
+      redirect_to root_url, notice: 'Your profile was successfully updated.'
     else
       render :edit
     end

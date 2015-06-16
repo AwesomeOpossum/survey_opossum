@@ -26,12 +26,12 @@ class AuthorsControllerTest < ActionController::TestCase
       post :create, author: { email: "email@email.com", name: @author.name, password: "password" }
     end
 
-    assert_redirected_to surveys_url
+    assert_redirected_to root_url
   end
 
   test "should update author" do
     patch :update, id: @author, author: { email: @author.email, name: @author.name, password: "password" }
-    assert_redirected_to surveys_url
+    assert_redirected_to root_url
   end
 
 end
