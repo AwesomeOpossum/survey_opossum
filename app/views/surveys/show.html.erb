@@ -1,6 +1,13 @@
 <div class="form-submit-confirmation">
 <p id="notice"><%= notice %></p>
 
+<header class=header>
+  <h1><%= @author.name %>'s Surveys</h1>
+  <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
+</header>
+
+
+
 <h2> Viewing results for <%=@survey.title %></h2>
 
 <div>

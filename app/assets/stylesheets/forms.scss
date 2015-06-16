@@ -25,7 +25,9 @@ form h3{
 }
 
 //SURVEY DETAILS
-
+.new-survey-container{
+text-align: left;
+}
 
 .survey-details{
 // padding-bottom:2em auto;
@@ -36,6 +38,10 @@ margin-bottom: 2em;
 
 
 // QUESTIONS
+.question-fields{
+  border-bottom: thin #888888 solid;
+margin-bottom: 3em;
+}
 
 .add-question{
     margin: 2em;
@@ -48,7 +54,16 @@ margin-bottom: 2em;
 	margin-bottom: .2em;
 }
 
+label{
+margin-right: 1.5em;
 
+}
+.question-type{
+  display: inline;
+  text-align: left;
+
+
+}
 .sort-order{
     width: 3em;
     margin-bottom: 1.5em;
@@ -73,8 +88,11 @@ margin-bottom: 2em;
 }
 
 
-.question-details .input-data{
+.question-details,
+.input-data{
  display: inline-block;
+ width: 90%;
+
 }
 
 
@@ -93,14 +111,12 @@ margin-bottom: 2em;
 
 
 // FOOTER
-.action-options{
- margin: auto;
-}
 
 
 // INPUTS
 .input-data{
     border: none;
+    width: 90%;
     padding: .25em;
     font-size: 1em;
     margin-top: .5em;
@@ -110,7 +126,9 @@ margin-bottom: 2em;
  background-color:#e9eef1 ;
 }
 
-
+.input-label{
+  text-align: left;
+}
 input:focus{
     outline: none;
 }
@@ -118,4 +136,10 @@ input:focus{
 
 .destroy-checkbox{
  display: none;
+}
+.actions{
+  display: inline;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
