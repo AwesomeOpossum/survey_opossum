@@ -1,5 +1,17 @@
 
-    <!-- New/Edit Survey Form -->
+<header class=header>
+  <h1>Create New Survey</h1>
+  <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
+  <div class="home-house-streamline">
+  <%= link_to 'My Surveys', root_path, :class=> "home-house-streamline"%>
+  </div>
+</div>
+
+</header>
+
+<!-- New/Edit Survey Form -->
+<div class="new-survey-container">
+
 
 <%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
   <% if @survey.errors.any? %>
@@ -41,34 +53,36 @@
       <div class="question-fields">
 
         <%= ff.number_field :order_number, class: "sort-order", min: 1 %>
-        <label class="question">Question Number</label>
+        <label class="question">Question Number</label></br>
 
-        <div class="text">What type of question would you like to ask?</br>
+        <div class="text ">What type of question would you like to ask?</br>
 
-          <label>
-            Yes or No
-            <%= ff.radio_button :question_type, 'Yes/No', class:'input-data'%>
-          </label>
 
-          <label>
-            Short Answer
-            <%= ff.radio_button :question_type, 'Short Answer', class:'input-data'%>
-          </label>
+           <label>
+             Yes or No
+               <%= ff.radio_button :question_type, 'Yes/No', class:'question-type'%>
+           </label>
 
-          <label>Long Answer
-            <%= ff.radio_button :question_type, 'Long Answer', class:'input-data'%>
-          </label><br>
+           <label>
+             Short Answer
+               <%= ff.radio_button :question_type, 'Short Answer', class:'question-type'%>
+           </label>
 
-           <!-- <button class"up">Up</button>
-           <button class"down">Down</button><br> -->
+           <label>Long Answer
+               <%= ff.radio_button :question_type, 'Long Answer', class:'question-type'%>
+           </label><br>
 
-          <label>Required answer
-            <%= ff.check_box :required, class:'input-data' %>
-          </label>
+
+
+           <label>Required answer
+           <%= ff.check_box :required, class:'input-data required' %>
+           </label>
+
 
           <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
 
-          <%= ff.text_field :question_text, class:'question-input', placeholder:'Type your question here' %>
+
+           <%= ff.text_field :question_text, class:'input-data', placeholder:'Type your question here' %>
 
         </div>
 
@@ -79,21 +93,23 @@
   </div>
 
 
-  <footer class="actions">
-    <span>
-       <%= f.button "Add New Question", type: 'button', class: 'add-button' %>
-    </span>
 
-    <span>
-      <label class="text publish">Publish
-        <%= f.check_box :publish %>
-      </label>
-    </span>
+     <footer class="actions">
+         <span>
+         <%= f.button "Add New Question", type: 'button', class: 'add-button footer' %>
+         </span>
 
-    <span>
-       <%= f.button "Save", class:'submit-button' %>
-    </span>
+         <span>
+         <label class="text publish footer">Publish
+         <%= f.check_box :publish %>
+         </label>
+         </span>
 
-  </footer>
+         <span>
+         <%= f.button "Save", class:'submit-button footer' %>
+         </span>
+
+     </footer>
+   </div>
 
 <%end%>

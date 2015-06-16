@@ -1,3 +1,14 @@
+<header class=header>
+  <h1>Create New Account</h1>
+
+</header>
+
+
+
+<div class="create-new-account">
+
+
+
 <%= form_for(@author) do |f| %>
   <div class="field">
     <%= f.label :name %><br>
@@ -16,6 +27,10 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit 'Create New User' %>
+    <%= f.submit 'Create New User', :class=> 'link new-account-link modal-link'%>
+
+
+
+  </div>
   </div>
 <% end %>

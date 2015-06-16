@@ -31,7 +31,7 @@ body{
 	position: fixed;
 	color: #ffffff;
 	width: 100%;
-	text-align: center;
+	// text-align: center;
 	z-index: 1;
 	height: 7em;
 	box-shadow: 0em .25em 2em #888888;
@@ -39,30 +39,51 @@ body{
 }
 
 		.header h1{
+			margin: .5em 0 0 0;
+			padding: 0;
 			text-align: center;
 		}
 
+		.logout{
+			// display: inline;
+			float: right;
+			font-size: 1.2em;
+			padding: .5em;
+			margin-right: 3em;
+			margin-top:-2.2em;
+			z-index: 1;
 
+		}
+
+
+.create-new-account,
+.thank-you,
 .login,
 .create-survey,
 .survey-results,
 .form-submit-confirmation,
-.user-home-page{
+.user-home-page,
+.take-survey{
 	font-size: 1.5em;
 	background-color: #ffffff;
-	margin-top: 5em;
-	padding: 5em;
+	margin-top: 9em;
+	padding: 2.5em;
 	min-width: 320px;
-	max-width: 775px;
+	max-width: 850px;
 	width: 100%;
 	margin-left: auto;
 	margin-right:auto;
 	box-shadow: 0em .25em 1em #888888;
 }
 
+
+.create-new-account,
 .form-submit-confirmation,
+.thank-you,
 .login{
 	max-width: 350px;
+	text-align: center;
+	padding: 2.5em;
 }
 
 .login-input{
@@ -73,7 +94,6 @@ body{
 	margin: .5em;
 	margin-left: auto;
 	margin-right: auto;
-
 	background: #cdcdcd;
 	color: white;
 }
@@ -81,4 +101,29 @@ body{
 .survey-results{
 	margin: 0 auto;
 	text-align: center;
+}
+
+.home-house-streamline{
+	width: 42px;
+	height: auto;
+}
+.small-modal-header{
+	color: #5b6a5b ;
+	text-align: center;
+	margin-top:.25em;
+
+}
+
+.centered-text{
+	text-align: center;
+
+}
+
+.modal-spacing{
+	margin-bottom: 3em;
+}
+
+
+.modal-background{
+	background-color:#839883;
 }

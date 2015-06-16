@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-button{
+link{
     color: #ffffff ;
     font-size: 1em;
     padding: .75em;
@@ -14,27 +14,42 @@ button{
     margin: 1em;
 }
 
-button:focus{
+
+button.focus,
+link:focus{
     outline:none;
 }
 
-.submit-button{
-   background-color:#f20c60  ;
+
+.submit-link{
+   background-color:#5b6a5b ;
 }
 
 
-.new-account-button{
-   background-color:#1d3654  ;
+
+.login,
+.new-account-link{
+
+   background-color:#ff2d8d;
+
 }
 
 
-.add-button{
+
+
+.modal-link{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.add-link{
    background-color:orange;
 }
 
-.submit-button:hover{
-    background-color:#c1094c ;
-}
+// .submit-link:hover{
+//     background-color:#c1094c ;
+// }
 
 .new-account-button:hover{
     background-color:blue;
@@ -45,12 +60,12 @@ button:focus{
 }
 
 
-.submit-button:active{
-    background-color:#c1094c ;
+.submit-link:active{
+    background-color:#9bac9b ;
 }
 
-.new-account-button:active{
-    background-color:blue;
+.new-account-link:active{
+    background-color:#ff6caf;
 }
 
 .add-button:active{
@@ -76,17 +91,17 @@ button:focus{
 
 
 
-
 //LINKS
 
 
 .link{
     text-decoration: none;
     color: #ffffff ;
-    font-size: 1em;
+    // font-size: 1.2em;
     padding: .75em;
     border-style: none;
     margin: 1em;
+    border-radius: .4em;
 }
 
 .newpage{
@@ -104,10 +119,17 @@ button:focus{
 
 
 .user-edit{
-	background-color:#cccccc;
+	background-color:#839883;
 	border-radius: .8em;
-	padding: .5em;
+	padding: .25em;
 	margin: .1;
 
+
+}
+
+
+
+.user-edit:active{
+  background-color:#9bac9b ;
 
 }
