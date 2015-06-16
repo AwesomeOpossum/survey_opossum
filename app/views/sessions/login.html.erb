@@ -5,25 +5,30 @@
 </header>
 
 
+
 <%= form_tag do  %>
 
 
 
   <div class="login">
+
+
     <div class="center-align">
-        <div class="center-align-input">
+      <div class="center-align-input">
 
-          <label class="input-label" for="email">Email</label><br>
-          <!-- <input id="email" class="login-input"type="text" placeholder="Email"><br> -->
+        <label class="input-label" for="email">Email</label><br>
+        <!-- <input id="email" class="login-input"type="text" placeholder="Email"><br> -->
 
-          <!-- <%= label_tag :email %> -->
-          <%= text_field_tag :email  %></br>
+<
+        <!-- <%= label_tag :email %> -->
+        <%= text_field_tag :email %></br>
 
-          <label class="input-label">Password</label><br>
-          <!-- <input class=" login-input password" type="text" placeholder="Password"><br> -->
 
-          <!-- <%= label_tag :password %> -->
-          <%= password_field_tag :password %></br>
+        <label class="input-label">Password</label><br>
+        <!-- <input class=" login-input password" type="text" placeholder="Password"><br> -->
+
+        <!-- <%= label_tag :password %> -->
+        <%= password_field_tag :password %></br>
 
         <div class="button-box">
           <button class="link submit-link">Log in</button>
@@ -31,10 +36,11 @@
           <!-- <button class="new-account-button" type="button">Create new</button> -->
           <%= link_to 'Create New User', new_author_path, :class=> 'link new-account-link' %>
 
-
         </div>
       </div>
     </div>
 
+
   </div>
+
 <% end %>

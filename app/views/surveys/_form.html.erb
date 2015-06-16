@@ -30,13 +30,11 @@
 
     <div class="survey-details">
 
-    <label class="text">Tell us the name of your survey:</label><br>
-
+      <label class="text">Tell us the name of your survey:</label><br>
 
       <%= f.text_field :title, class: "input-data", :placeholder => "Survey Title"%><br>
 
-
-    <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
+      <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
 
       <%= f.text_area :description, class:'input-data', :placeholder => "Survey Description" %>
 
@@ -44,15 +42,7 @@
         <%= f.hidden_field :author_id, class:"input-data" %>
       </div>
 
-
     </div>
-
-
-
-
-
-
-
 
   <h3 class="questions">Add your questions here</h3>
 
@@ -66,6 +56,7 @@
         <label class="question">Question Number</label></br>
 
         <div class="text ">What type of question would you like to ask?</br>
+
 
            <label>
              Yes or No
@@ -87,7 +78,9 @@
            <%= ff.check_box :required, class:'input-data required' %>
            </label>
 
-           <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
+
+          <%= ff.check_box :_destroy, class:'destroy-checkbox' %>
+
 
            <%= ff.text_field :question_text, class:'input-data', placeholder:'Type your question here' %>
 
@@ -98,6 +91,7 @@
     <% end %>
 
   </div>
+
 
 
      <footer class="actions">
@@ -117,4 +111,5 @@
 
      </footer>
    </div>
+
 <%end%>
