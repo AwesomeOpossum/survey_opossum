@@ -1,28 +1,14 @@
-
 <p id="notice"><%= notice %></p>
-
-
-
-<!-- <h1>Login</h1>
-
-<%= form_tag do %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Login"%>
-<<<<<<< HEAD
-  <%= link_to 'New User', new_author_path %>
-<% end %> -->
-
-
+<h1> </h1><br>
+<h1> </h1><br>
+<br>
 
 <header class='header'>
 <h1>Roadkill 'Possum' Survey Maker</h1>
 </header>
 
 
-  <%= form_tag do %>
+<%= form_tag do %>
   <form class="login">
     <div class="center-align">
         <div class="center-align-input">
@@ -31,26 +17,24 @@
           <!-- <input id="email" class="login-input"type="text" placeholder="Email"><br> -->
 
           <!-- <%= label_tag :email %> -->
-          <%= text_field_tag :email, 'email@example.com', class:'login-input'%></br>
+          <%= text_field_tag :email %></br>
 
           <label class="input-label">Password</label><br>
           <!-- <input class=" login-input password" type="text" placeholder="Password"><br> -->
 
           <!-- <%= label_tag :password %> -->
-          <%= password_field_tag :password, class:"login-input" %></br>
+          <%= password_field_tag :password %></br>
 
         <div class="button-box">
           <button class="submit-button">Log in</button>
-          <%= submit_tag "Log In", :class=>'submit-button'  %>
 
-          <button class="new-account-button" type="button">Create new</button>
+          <!-- <button class="new-account-button" type="button">Create new</button> -->
+          <%= link_to 'Create New User', new_author_path, :class=> 'link newpage' %>
+
 
         </div>
       </div>
     </div>
 
     </form>
-=======
-  <%= link_to 'New User', new_author_path, class: 'button submit-button' %>
->>>>>>> 3956f397fc174988db0319b39effde739de53327
 <% end %>
