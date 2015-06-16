@@ -4,20 +4,31 @@
 <header class=header>
   <h1><%= @author.name %>'s Surveys</h1>
 
-  <!-- <img src="stylesheets/surveyletters.jpg" alt="Smiley face" height="460" width="330" class="logo"> -->
-
 </header>
 
+
+
   <form class="user-home-page">
+<<<<<<< HEAD
+    <div class="button-box">
+       <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
+       <%= button_tag 'Log Out', :class=> 'button submit-button' %>
+
+
+=======
         <div class="button-box">
            <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage'%>
            <%= link_to 'Log Out', logout_path, class: 'button submit-button' %>
+>>>>>>> 3956f397fc174988db0319b39effde739de53327
    <table rules="none" class="table">
       <thead>
         <tr >
           <!-- <th class="table-header">Published</th> -->
           <th class="table-header">Survey Title</th>
+<<<<<<< HEAD
+=======
           <th class="table-header">Description</th>
+>>>>>>> 3956f397fc174988db0319b39effde739de53327
           <th class="table-header url">Link to Survey</th>
           <th class="table-header"></th>
           <th class="table-header"></th>

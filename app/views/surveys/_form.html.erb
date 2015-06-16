@@ -1,44 +1,50 @@
-<!-- New/Edit Survey Form -->
+
+    <!-- New/Edit Survey Form -->
+
+    <%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
+    <% if @survey.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+        <ul>
+        <% @survey.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <!-- Survey Details -->
+
+    <div class="survey-details">
+
+    <label class="text">Tell us the name of your survey:</label><br>
 
 
-<%= form_for @survey, :html => {:class => "create-survey"} do |f| %>
- <% if @survey.errors.any? %>
-   <div id="error_explanation">
-     <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
-
-     <ul>
-     <% @survey.errors.full_messages.each do |message| %>
-       <li><%= message %></li>
-     <% end %>
-     </ul>
-   </div>
- <% end %>
-
-<!-- Survey Details -->
+      <%= f.text_field :title, class: "input-data", :placeholder => "Survey Title"%><br>
 
 
+    <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
 
-<div class="survey-details">
+      <%= f.text_area :description, class:'input-data', :placeholder => "Survey Description" %>
 
-
- <label class="text">Tell us the name of your survey:</label><br>
-
-   <%= f.text_field :title, class: "input-data", :placeholder => "Survey Title"%><br>
-
- <label class="text">Please provide a brief description of your survey to give the survey takers some context for your questions:</label><br>
-
-   <%= f.text_area :description, class:'input-data', :placeholder => "Survey Description" %>
-
-   <div class="field">
-     <%= f.hidden_field :author_id, class:"input-data" %>
-   </div>
+      <div class="field">
+        <%= f.hidden_field :author_id, class:"input-data" %>
+      </div>
 
 
- </div>
+    </div>
+
+
+
+
+
 
 
 
   <h3 class="questions">Add your questions here</h3>
+
+       <%= f.fields_for(:questions) do |ff| %>
 
 
   <div class="questions-container">
