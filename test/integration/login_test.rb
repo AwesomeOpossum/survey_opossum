@@ -9,7 +9,7 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
 
     follow_redirect!
-    assert response.body.match("bob")
+    assert response.body.match("Bob")
     number_of_surveys = css_select("tbody tr").count
 
     get new_survey_path
@@ -18,7 +18,7 @@ class LoginTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
 
     follow_redirect!
-    assert response.body.match("bob")
+    assert response.body.match("Bob")
     assert response.body.match("Test Survey")
     assert_equal number_of_surveys+1, css_select("tbody tr").count
 
