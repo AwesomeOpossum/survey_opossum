@@ -1,12 +1,11 @@
-
-<p id="notice"><%= notice %></p>
-
 <header class=header>
-  <h1><%= @author.name %>'s Surveys</h1>
+  <h1><%= @author.name.capitalize %>'s Surveys</h1>
 
   <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
 
 </header>
+<div class="alert-box notice"><span>notice: </span><%= notice %></div>
+
 
   <form class="user-home-page">
 
@@ -41,8 +40,8 @@
               <% else %>
                 <td> Survey not published. </td>
               <% end %>
-              <td><%= link_to 'Results', survey, :class => "link user-edit edit" %></td>
-              <td><%= link_to 'Edit', edit_survey_path(survey), :class=> "link user-edit edit"%></td>
+              <td><%= link_to 'Results', survey, class: "link user-edit edit" %></td>
+              <td><%= link_to 'Edit', edit_survey_path(survey), class: "link user-edit edit"%></td>
               <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit edit" %></td>
             </tr>
          <% end %>
