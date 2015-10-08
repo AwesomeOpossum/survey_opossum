@@ -1,10 +1,10 @@
-
-<header class="header">
-  <h1>Edit</h1>
+<header class=header>
+  <h1>Edit Survey</h1>
+  <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
+  <div class="home-house-streamline">
+    <%= link_to 'My Surveys', root_path, :class=> "home-house-streamline"%>
+  </div>
 </header>
-
 <div class="alert-box notice"><span>notice: </span><%= notice %></div>
 
 <%= render 'form' %>
-
-<%= link_to 'My Surveys', root_path , class:"icon-home-house"%>

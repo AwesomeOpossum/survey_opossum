@@ -1,53 +1,43 @@
 <header class=header>
   <h1><%= @author.name.capitalize %>'s Surveys</h1>
-
   <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
-
 </header>
+
 <div class="alert-box notice"><span>notice: </span><%= notice %></div>
-
-
-  <form class="user-home-page">
-
-        <div class="button-box">
-           <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage' %>
-
-        </div>
-   <table rules="none" class="table">
-
-      <thead>
-        <tr >
-          <!-- <th class="table-header">Published</th> -->
-          <th class="table-header">Survey Title</th>
-          <th class="table-header">Description</th>
-          <th class="table-header url">Link to Survey</th>
-          <th class="table-header edit"></th>
-          <th class="table-header edit"></th>
-          <th class="table-header edit"></th>
-          <th colspan="3"></th>
+<div class="user-home-page">
+  <div class="button-box">
+     <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage' %>
+  </div>
+  <table rules="none" class="table">
+    <thead>
+      <tr >
+        <!-- <th class="table-header">Published</th> -->
+        <th class="table-header">Survey Title</th>
+        <th class="table-header">Description</th>
+        <th class="table-header url">Link to Survey</th>
+        <th class="table-header edit"></th>
+        <th class="table-header edit"></th>
+        <th class="table-header edit"></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @surveys.each do |survey| %>
+        <tr>
+          <!-- <td><%= survey.publish %></td> -->
+          <td><%= survey.title %></td>
+          <td><%= survey.description %></td>
+          <!-- <td><%= survey.description %></td> -->
+          <% if survey.publish == true %>
+            <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
+          <% else %>
+            <td> Survey not published. </td>
+          <% end %>
+          <td><%= link_to 'Results', survey, class: "link user-edit edit" %></td>
+          <td><%= link_to 'Edit', edit_survey_path(survey), class: "link user-edit edit"%></td>
+          <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit edit" %></td>
         </tr>
-      </thead>
-      <tbody>
-
-          <% @surveys.each do |survey| %>
-            <tr>
-              <!-- <td><%= survey.publish %></td> -->
-              <td><%= survey.title %></td>
-              <td><%= survey.description %></td>
-              <!-- <td><%= survey.description %></td> -->
-              <% if survey.publish == true %>
-                <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
-              <% else %>
-                <td> Survey not published. </td>
-              <% end %>
-              <td><%= link_to 'Results', survey, class: "link user-edit edit" %></td>
-              <td><%= link_to 'Edit', edit_survey_path(survey), class: "link user-edit edit"%></td>
-              <td><%= link_to 'Delete', survey, method: :delete, data: { confirm: 'Are you sure?' }, :class => "link user-edit edit" %></td>
-            </tr>
-         <% end %>
+     <% end %>
     </tbody>
-
-
-     <br>
-
-  </form>
+   <br>
+</div>

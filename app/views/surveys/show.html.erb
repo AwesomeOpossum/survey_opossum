@@ -1,22 +1,18 @@
 <div class="form-submit-confirmation">
   <div class="alert-box notice"><span>notice: </span><%= notice %></div>
-
-<h2> Viewing results for <%=@survey.title %></h2>
-
-<div>
-  <% @questions.each do |q| %>
-    <div>
-      <h3><strong><%= q.question_text %></strong></h3>
-    </div>
-    <% q.answers.each do |a| %>
+  <h2> Viewing results for <%=@survey.title %></h2>
+  <div>
+    <% @questions.each do |q| %>
       <div>
-        <%= a.answer %>
+        <h3><strong><%= q.question_text %></strong></h3>
       </div>
+      <% q.answers.each do |a| %>
+        <div>
+          <%= a.answer %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
-<br>
-
-
-<%= link_to "My Survey's", root_path %>
+  </div>
+  <br>
+  <%= link_to "My Survey's", root_path %>
 </div>
