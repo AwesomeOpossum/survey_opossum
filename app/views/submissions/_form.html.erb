@@ -2,11 +2,10 @@
   <% if @submission.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
-
       <ul>
-      <% @submission.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @submission.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -20,7 +19,6 @@
     <% else %>
       <div> (Optional) </div>
     <% end %>
-
     <% if q.question_type == "Yes/No" %>
       <div class="field">
         <%= ff.label :answer, 'Yes' %>
@@ -40,7 +38,6 @@
       </div>
     <% end %>
   <% end %>
-
   <div class="actions">
     <%= f.submit "Submit Survey", class: "submit-button" %>
   </div>
