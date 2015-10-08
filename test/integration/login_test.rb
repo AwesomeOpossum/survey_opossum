@@ -24,10 +24,21 @@ class LoginTest < ActionDispatch::IntegrationTest
 
     assert_select "a[href='#{logout_path}']"
 
-    get sessions_logout_path
+    get logout_path
     assert_redirected_to login_path
     follow_redirect!
     assert_select "input[type='password']"
     assert response.body.match("Logout successful.")
+  end
+
+  test "unsuccessful login" do
+    get login_path
+
+    assert_select "input[type='password']", 1
+    post login_path, email: "bob@email.com", password: "junk"
+    assert_template "new"
+
+    post login_path, email: "bob@junk.com", password: "password"
+    assert_template "new"
   end
 end

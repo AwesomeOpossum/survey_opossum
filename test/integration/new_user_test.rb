@@ -17,7 +17,7 @@ class NewUserTest < ActionDispatch::IntegrationTest
 
     assert_select "a[href='#{logout_path}']"
 
-    get sessions_logout_path
+    get logout_path
     assert_redirected_to login_path
     follow_redirect!
     assert_select "input[type='password']"

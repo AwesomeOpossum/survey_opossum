@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
-  def login
+  def new
+  end
+
+  def create
     if request.post?
       user = Author.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
@@ -7,11 +10,12 @@ class SessionsController < ApplicationController
         redirect_to root_path, notice: "Login successful."
       else
         flash.now[:notice] = "Invalid username and password."
+        render :new
       end
     end
   end
 
-  def logout
+  def destroy
     session[:user_id] = nil
     redirect_to login_path, notice: "Logout successful."
   end
