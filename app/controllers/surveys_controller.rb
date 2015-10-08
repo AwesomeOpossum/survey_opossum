@@ -64,10 +64,4 @@ class SurveysController < ApplicationController
           :order_number, :_destroy])
     end
 
-    def logged_in?
-      @author = Author.find_by_id(session[:user_id])
-      unless @author
-        redirect_to login_path, notice: "Please login"
-      end
-    end
 end
