@@ -6,11 +6,6 @@ class AuthorsControllerTest < ActionController::TestCase
     session[:user_id] = @author.id
   end
 
-  test "should get show" do
-    get :show, id: @author
-    assert_response :success
-  end
-
   test "should get edit" do
     get :edit, id: @author
     assert_response :success
