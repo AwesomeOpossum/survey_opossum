@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :submissions
-  resources :authors
+  resources :authors, except: [:show, :index]
   resources :surveys
 
   get 'takesurvey/:id' => 'submissions#new'
