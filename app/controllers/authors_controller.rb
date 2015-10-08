@@ -1,6 +1,6 @@
 class AuthorsController < ApplicationController
   before_action :logged_in?, except: [:new, :create]
-  before_action :set_author, only: [:show, :edit, :update, :destroy]
+  before_action :set_author, only: [:edit, :update, :destroy]
 
   def new
     @author = Author.new
