@@ -3,15 +3,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if request.post?
-      user = Author.find_by_email(params[:email])
-      if user && user.authenticate(params[:password])
-        session[:user_id] = user.id
-        redirect_to root_path, notice: "Login successful."
-      else
-        flash.now[:notice] = "Invalid username and password."
-        render :new
-      end
+    user = Author.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect_to root_path, notice: "Login successful."
+    else
+      flash.now[:notice] = "Invalid username and password."
+      render :new
     end
   end
 
