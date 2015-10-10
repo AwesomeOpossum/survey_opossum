@@ -3,7 +3,7 @@
   <%= link_to 'Log Out', logout_path, :class=> 'link submit-link logout' %>
 </header>
 
-<div class="alert-box notice"><span>notice: </span><%= notice %></div>
+<div class="alert-box" id="notice"><span>notice: </span><%= notice %></div>
 <div class="user-home-page">
   <div class="button-box">
      <%= link_to 'New Survey', new_survey_path, :class=> 'link newpage' %>
@@ -29,7 +29,11 @@
           <td><%= survey.description %></td>
           <!-- <td><%= survey.description %></td> -->
           <% if survey.publish == true %>
-            <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td>
+            <td>
+              <%= text_field_tag "request.original_url}takesurvey/#{survey.id}",
+                  "#{request.original_url}takesurvey/#{survey.id}" %>
+            </td>
+            <!-- <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td> -->
           <% else %>
             <td> Survey not published. </td>
           <% end %>
