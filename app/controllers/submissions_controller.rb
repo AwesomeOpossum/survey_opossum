@@ -9,9 +9,9 @@ class SubmissionsController < ApplicationController
   end
 
   def new
-    @survey = Survey.find_by_id(params[:id])
+    survey = Survey.find_by_id(params[:id])
     @submission = Submission.new
-    questions = Question.where(survey_id: @survey.id).order(:order_number)
+    questions = Question.where(survey_id: survey.id).order(:order_number)
     questions.each do |q|
       @submission.answers.build(question: q)
     end

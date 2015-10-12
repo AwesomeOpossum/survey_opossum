@@ -30,8 +30,7 @@
           <!-- <td><%= survey.description %></td> -->
           <% if survey.publish == true %>
             <td>
-              <%= text_field_tag "request.original_url}takesurvey/#{survey.id}",
-                  "#{request.original_url}takesurvey/#{survey.id}" %>
+              <%= text_field_tag nil, "#{request.original_url}takesurvey/#{survey.id}" %>
             </td>
             <!-- <td><a href=<%= "#{request.original_url}takesurvey/#{survey.id}"%>>Take Survey</a></td> -->
           <% else %>
